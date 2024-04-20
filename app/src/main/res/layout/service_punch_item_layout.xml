@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.servicepunch.ServicePunchItemViewModel" />
+    </data>
+
+    <ImageView
+        android:onClick="@{()->viewModel.itemClick()}"
+        loadSrc="@{viewModel.imageIcon}"
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        android:layout_width="143dp"
+        android:layout_height="143dp"/>
+</layout>

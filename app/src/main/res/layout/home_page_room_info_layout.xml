@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.homepage.HomePageViewModel" />
+        <variable
+            name="click"
+            type="com.yjkj.service_recoder.ui.homepage.HomeFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/room_info_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        app:layout_constraintWidth_percent="0.225"
+        app:layout_constraintHeight_percent="0.17"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@id/top_option_layout"
+        app:layout_constraintStart_toStartOf="@id/top_option_layout">
+
+        <TextView
+            android:id="@+id/room_id_text"
+            android:text="@string/room_id_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"/>
+        <TextView
+            android:text="@string/others_room_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/room_id_text"
+            app:layout_constraintBottom_toBottomOf="@id/room_id_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/color_4580FF"
+            android:textSize="8dp"/>
+        <View
+            android:id="@+id/cross_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/color_EEEEEE"
+            app:layout_constraintTop_toBottomOf="@id/room_id_text"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/building_number"
+            android:text="6-1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/room_id_text"
+            app:layout_constraintTop_toBottomOf="@id/cross_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="24dp"/>
+        <TextView
+            android:text="706"
+            android:id="@+id/room_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="@id/building_number"
+            app:layout_constraintBottom_toBottomOf="@id/building_number"
+            app:layout_constraintStart_toEndOf="@id/building_number"
+            android:layout_marginStart="21dp"/>
+        <TextView
+            android:text="室"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="@id/room_number"
+            app:layout_constraintBottom_toBottomOf="@id/room_number"
+            app:layout_constraintStart_toEndOf="@id/room_number"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:textSize="12dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

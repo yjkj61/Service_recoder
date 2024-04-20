@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryVieModel" />
+        <variable
+            name="click"
+            type="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/user_contact_list_layout"
+        motionLayoutInstance="@={viewModel.scrollBarLayout}"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        app:layout_constraintTop_toBottomOf="@id/room_info_layout"
+        app:layout_constraintStart_toStartOf="@id/room_info_layout"
+        app:layout_constraintEnd_toEndOf="@id/room_info_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutDescription="@xml/fragment_home_contacts_rv_scene">
+
+        <androidx.recyclerview.widget.RecyclerView
+            addRvScrollListener="@{viewModel.recyclerViewScrollChangeListener}"
+            android:id="@+id/contacts_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            dividerItemDecoration2="@{1}"
+            items="@{viewModel.contactsItems}"
+            itemBinding="@{viewModel.contactsItemBind}"/>
+
+        <View
+            android:id="@+id/scroll_bar_track"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/scroll_bar_bg_shape"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <View
+            android:id="@+id/scroll_bar_block"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@drawable/scroll_bar_block_shape"
+            app:layout_constraintTop_toTopOf="@+id/scroll_bar_track" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

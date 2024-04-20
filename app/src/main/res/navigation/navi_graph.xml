@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.yjkj.service_recoder.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="fragment_login"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yjkj.service_recoder.ui.homepage.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.yjkj.service_recoder.ui.userinfo.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
+    <fragment
+        android:id="@+id/editUserInfoFragment"
+        android:name="com.yjkj.service_recoder.ui.edituserinfo.EditUserInfoFragment"
+        android:label="fragment_edit_user_info"
+        tools:layout="@layout/fragment_edit_user_info" />
+    <fragment
+        android:id="@+id/userSecondaryFragment"
+        android:name="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryFragment"
+        android:label="fragment_user_secondary"
+        tools:layout="@layout/fragment_user_secondary" />
+    <fragment
+        android:id="@+id/servicePunchFragment"
+        android:name="com.yjkj.service_recoder.ui.servicepunch.ServicePunchFragment"
+        android:label="fragment_service_punch"
+        tools:layout="@layout/fragment_service_punch" />
+    <fragment
+        android:id="@+id/servicePunchDetailFragment"
+        android:name="com.yjkj.service_recoder.ui.servicepunchdetail.ServicePunchDetailFragment"
+        android:label="fragment_service_punch_detail"
+        tools:layout="@layout/fragment_service_punch_detail" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.yjkj.service_recoder.ui.contacts.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/phCheckListFragment"
+        android:name="com.yjkj.service_recoder.ui.ph.phchecklist.PhCheckListFragment"
+        android:label="fragment_ph_check_list"
+        tools:layout="@layout/fragment_ph_check_list" />
+    <fragment
+        android:id="@+id/phCheckDetailFragment"
+        android:name="com.yjkj.service_recoder.ui.ph.phcheckdetail.PhCheckDetailFragment"
+        android:label="fragment_ph_check_detail"
+        tools:layout="@layout/fragment_ph_check_detail" />
+
+
+</navigation>

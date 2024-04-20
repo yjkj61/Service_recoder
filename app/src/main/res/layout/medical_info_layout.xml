@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.userinfo.UserInfoViewModel" />
+        <variable
+            name="click"
+            type="com.yjkj.service_recoder.ui.userinfo.UserInfoFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="20dp">
+
+        <View
+            android:id="@+id/point_view"
+            android:background="@drawable/user_basic_info_point_shape3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:text="医疗信息"
+            android:textColor="@color/color_333333"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@+id/point_view"
+            app:layout_constraintBottom_toBottomOf="@+id/point_view"
+            app:layout_constraintStart_toEndOf="@+id/point_view"/>
+        <View
+            android:id="@+id/cross_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/point_view"
+            android:background="@color/color_EEEEEE"
+            android:layout_marginTop="17dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/medical_rv"
+            android:background="@drawable/user_basic_info_bg_shape3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.34"
+            app:layout_constraintTop_toBottomOf="@id/cross_line"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            items="@{viewModel.medicalItems}"
+            itemBinding="@{viewModel.medicalItemBind}"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingTop="12dp"
+            android:paddingStart="24dp"
+            android:background="@drawable/light_pink_bg_10dp_corner_shape"
+            app:layout_constraintTop_toTopOf="@+id/medical_rv"
+            app:layout_constraintStart_toEndOf="@+id/medical_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/medical_rv"
+            android:layout_marginStart="24dp">
+
+            <TextView
+                android:text="个人病史"
+                android:id="@+id/medical_history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="16dp"
+                android:textColor="@color/color_777777"/>
+            <TextView
+                android:text="无"
+                android:id="@+id/medical_history_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/medical_history_text"
+                app:layout_constraintBaseline_toBaselineOf="@id/medical_history_text"
+                android:layout_marginStart="14dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_333333"/>
+
+            <TextView
+                android:text="家族史"
+                android:id="@+id/family_history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/medical_history_text"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_777777"/>
+            <TextView
+                android:text="无"
+                android:id="@+id/family_history_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/medical_history_text"
+                app:layout_constraintBaseline_toBaselineOf="@id/family_history_text"
+                android:layout_marginStart="14dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_333333"/>
+
+            <TextView
+                android:text="警惕疾病"
+                android:id="@+id/alert_disease_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/family_history_text"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_777777"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/alert_disease_text"
+                app:layout_constraintStart_toStartOf="@+id/family_history_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="@{viewModel.alertDiseaseLayoutManager}"
+                items="@{viewModel.alertDiseaseItems}"
+                itemBinding="@{viewModel.alertDiseaseItemBinding}"/>
+
+            <TextView
+                android:text="定期检查"
+                android:id="@+id/regular_checking_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/alert_disease_text"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_777777"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/regular_checking_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/regular_checking_text"
+                app:layout_constraintStart_toStartOf="@+id/family_history_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="@{viewModel.regularCheckingLayoutManager}"
+                items="@{viewModel.regularCheckingItems}"
+                itemBinding="@{viewModel.regularCheckingItemBinding}"/>
+
+            <TextView
+                android:text="医疗和生活建议："
+                android:id="@+id/doctor_suggest_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/regular_checking_rv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"
+                android:textSize="16dp"
+                android:textColor="@color/color_777777"/>
+            <TextView
+                android:text="@{viewModel.doctorSuggest}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/color_333333"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="@id/doctor_suggest_text"
+                app:layout_constraintTop_toBottomOf="@+id/doctor_suggest_text"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

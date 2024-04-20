@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryVieModel" />
+        <variable
+            name="click"
+            type="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        app:layout_constraintStart_toStartOf="@+id/nurse_plan_record_layout"
+        app:layout_constraintEnd_toEndOf="@+id/nurse_plan_record_layout"
+        app:layout_constraintTop_toBottomOf="@+id/nurse_plan_record_layout"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_option_layout">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="呼叫服务记录"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/record_list"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@drawable/call_service_scroll_bar_thumb_shape"
+            android:scrollbarTrackVertical="@drawable/call_service_scroll_bar_track_shape"
+            android:fadeScrollbars="false"
+            app:layout_constraintTop_toBottomOf="@id/title_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            items="@{viewModel.callLogItems}"
+            itemBinding="@{viewModel.callLogItemBinding}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

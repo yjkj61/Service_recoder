@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.userinfo.UserInfoViewModel" />
+        <variable
+            name="click"
+            type="com.yjkj.service_recoder.ui.userinfo.UserInfoFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/device_info_layout"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="20dp">
+
+        <View
+            android:id="@+id/point_view"
+            android:background="@drawable/user_basic_info_point_shape2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:text="设备信息"
+            android:textColor="@color/color_333333"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@+id/point_view"
+            app:layout_constraintBottom_toBottomOf="@+id/point_view"
+            app:layout_constraintStart_toEndOf="@+id/point_view"/>
+        <View
+            android:id="@+id/cross_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/point_view"
+            android:background="@color/color_EEEEEE"
+            android:layout_marginTop="17dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cross_line"
+            android:layout_marginTop="46dp"
+            app:layoutManager="@{viewModel.deviceGridLayoutManager}"
+            dividerItemDecoration="@{viewModel.deviceItemDecoration}"
+            items="@{viewModel.deviceItems}"
+            itemBinding="@{viewModel.deviceItemBinding}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

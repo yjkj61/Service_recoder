@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.login.items.LoginItemsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/light_blue_bg_8_dp_corner_shape"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            loadSrc="@{viewModel.leftIcon}"
+            android:id="@+id/left_icon"
+            android:layout_width="28dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/group_153"/>
+        <EditText
+            addInputType="@{viewModel.inputType}"
+            addTextWatcher="@{viewModel.textWatcher}"
+            android:text="@={viewModel.content}"
+            editHintText="@{viewModel.type}"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/left_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textCursorDrawable="@drawable/blue_corsur_shape"
+            android:textSize="16dp"
+            android:textColor="@color/color_333333"
+            android:layout_marginStart="20dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:onClick="@{()->viewModel.changePwdVisible()}"
+            android:visibility="@{viewModel.pwdVisibleIconVisibility}"
+            loadSrc="@{viewModel.pwdVisibleIcon}"
+            android:layout_width="33dp"
+            android:layout_height="22dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="23dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

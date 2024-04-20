@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.usersecondary.items.CallLogItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:shadowColor="@color/black"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/white">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@={viewModel.serviceDate}"
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:onClick="@{()->viewModel.agree()}"
+                android:id="@+id/agree_button"
+                android:text="接受"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:background="@drawable/agree_button_shape"
+                app:layout_constraintTop_toBottomOf="@id/date_text"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/date_text"
+                app:layout_constraintEnd_toEndOf="@id/date_text"/>
+
+            <TextView
+                android:text="@{viewModel.serviceType}"
+                android:id="@+id/service_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/color_E42A2C"
+                app:layout_constraintTop_toTopOf="@id/date_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:onClick="@{()->viewModel.disagree()}"
+                android:id="@+id/disagree_button"
+                android:text="拒绝"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:background="@drawable/disagree_button_shape"
+                app:layout_constraintTop_toBottomOf="@id/service_type"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/service_type"
+                app:layout_constraintEnd_toEndOf="@id/service_type"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

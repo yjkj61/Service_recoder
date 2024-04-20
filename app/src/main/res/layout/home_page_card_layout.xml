@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.ui.homepage.HomePageViewModel" />
+        <variable
+            name="click"
+            type="com.yjkj.service_recoder.ui.homepage.HomeFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/white_bg_10_dp_corner_bg_shape"
+        app:layout_constraintTop_toBottomOf="@+id/weather_info_layout"
+        app:layout_constraintStart_toStartOf="@+id/weather_info_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <ImageButton
+            android:onClick="@{()->click.sign()}"
+            android:id="@+id/sign_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.59"
+            app:layout_constraintWidth_percent="0.17"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/slice_sign"/>
+        <ImageButton
+            android:onClick="@{()->click.notice()}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.17"
+            app:layout_constraintHeight_percent="0.36"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/slice_notifation"/>
+        <ImageButton
+            android:onClick="@{()->click.visual()}"
+            android:id="@+id/visual_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.17"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sign_card"
+            android:layout_marginStart="12dp"
+            android:background="@mipmap/slice_3"/>
+        <View
+            android:id="@+id/cross_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_EEEEEE"
+            app:layout_constraintStart_toEndOf="@+id/visual_button"
+            android:layout_marginStart="8dp"/>
+        <ImageButton
+            android:onClick="@{()->click.wisdomService()}"
+            android:id="@+id/wisdom_service_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/cross_line"
+            app:layout_constraintWidth_percent="0.38"
+            app:layout_constraintHeight_percent="0.43"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/slice_4"/>
+        <ImageButton
+            android:onClick="@{()->click.addressList()}"
+            android:id="@+id/address_list_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@mipmap/slice_5"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_EEEEEE"
+            app:layout_constraintStart_toEndOf="@+id/wisdom_service_card"
+            app:layout_constraintEnd_toStartOf="@+id/address_list_card"
+            android:layout_marginStart="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
