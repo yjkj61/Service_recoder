@@ -28,5 +28,16 @@
     <color name="color_CC163193">#CC163193</color>
     <color name="color_999999">#999999</color>
     <color name="color_FF3D32">#FF3D32</color>
+    <color name="blue00">#0089FF</color>
+
+    <color name="status_bar_color">#EAE9F9</color>
+
+    <color name="chat_box">#ffffff</color>
+    <color name="accent_color">#05c160</color>
+
+    <color name="background_gray1">#EDEDED</color>
+    <color name="background_gray3">#D4D4D4</color>
+    <color name="background_gray5">#c9c9c9</color>
+    <color name="view_bg">#E7E7E7</color>
 
 </resources>

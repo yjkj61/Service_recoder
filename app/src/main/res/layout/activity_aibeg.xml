@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.service_recoder.java.ui.aibed.AiBedViewModel" />
+    </data>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:paddingHorizontal="35dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="40dp"
+           android:gravity="center_vertical">
+
+           <ImageView
+               android:id="@+id/back"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:src="@drawable/arrow_left" />
+
+           <ImageView
+               android:id="@+id/header"
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_marginStart="60dp"
+               android:src="@drawable/nologin_header" />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="18dp"
+               android:gravity="start|center_vertical"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="AI睡眠垫"
+                   android:textColor="#ff4d4d4d"
+                   android:textSize="23sp" />
+
+               <TextView
+                   android:id="@+id/connect_status"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="连接状态：已连接"
+                   android:textColor="#ff4d4d4d"
+                   android:textSize="13sp" />
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/sleep_list"
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:layout_marginStart="20dp"
+               android:gravity="center_vertical"
+               android:orientation="horizontal">
+
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:gravity="start"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="卧床时间"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="13sp" />
+
+                   <TextView
+                       android:id="@+id/sleep_time"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:text="8小时3分钟"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="17sp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="20dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="平均心率"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="13sp" />
+
+                   <TextView
+                       android:id="@+id/avg_xinlv"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:text="8小时3分钟"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="17sp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="20dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="平均呼吸"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="13sp" />
+
+                   <TextView
+                       android:id="@+id/avg_huxi"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:text="8小时3分钟"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="17sp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="20dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="平均呼吸"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="13sp" />
+
+                   <TextView
+                       android:id="@+id/avg_away_beg"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:text="8小时3分钟"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="17sp" />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="20dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="平均呼吸"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="13sp" />
+
+                   <TextView
+                       android:id="@+id/play"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:text="8小时3分钟"
+                       android:textColor="#ff4d4d4d"
+                       android:textSize="17sp" />
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="36dp"
+           android:layout_marginHorizontal="72dp"
+           android:layout_marginTop="14dp"
+           android:background="@drawable/ai_beg_tab_back"
+           android:gravity="center_vertical"
+
+           android:orientation="horizontal"
+           android:paddingHorizontal="25dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="2023年1月17日"
+               android:textColor="#ff4d4d4d"
+               android:textSize="12sp" />
+
+           <View
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1" />
+
+           <com.flyco.tablayout.SlidingTabLayout
+               android:id="@+id/tl_2"
+               android:layout_width="300dp"
+               android:layout_height="match_parent"
+               android:background="#00FFFFFF"
+               app:tl_divider_color="#00000000"
+               app:tl_divider_padding="20dp"
+               app:tl_divider_width="0dp"
+               app:tl_indicator_color="#00FFFFFF"
+               app:tl_indicator_height="0dp"
+               app:tl_indicator_width_equal_title="true"
+               app:tl_tab_space_equal="true"
+               app:tl_textSelectColor="#FF4D4D4D"
+               app:tl_textUnselectColor="#FF4D4D4D"
+               app:tl_textsize="14sp"
+               app:tl_underline_color="#00000000"
+               app:tl_underline_height="0dp" />
+
+       </LinearLayout>
+
+       <com.yjkj.service_recoder.java.diyView.NoScrollViewPager
+           android:id="@+id/view_pager"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginHorizontal="72dp"
+           android:layout_marginTop="20dp" />
+
+   </LinearLayout>
+
+</layout>

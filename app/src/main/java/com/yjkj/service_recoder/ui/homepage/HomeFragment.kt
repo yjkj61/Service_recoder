@@ -15,6 +15,7 @@ import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.library.base.BaseFragment
 import com.yjkj.service_recoder.library.base.nav
 import com.yjkj.service_recoder.library.utils.ext.toast
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 /**

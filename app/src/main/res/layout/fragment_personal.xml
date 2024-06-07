@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yjkj.property_management.ui.page.personal.PersonalViewModel" />
+        <variable
+            name="click"
+            type="com.yjkj.property_management.ui.page.personal.PersonalFragment.Click" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/color_EBF1F7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:paddingTop="30dp">
+
+        <!--   顶部操作按钮     -->
+        <include
+            layout="@layout/personal_top_option_layout"
+            bind:viewModel="@{viewModel}"
+            bind:click="@{click}"/>
+        <!--    用户信息    -->
+        <include
+            layout="@layout/personal_info_layout"
+            bind:viewModel="@{viewModel}"
+            bind:click="@{click}"/>
+
+        <!--    用户联系人信息    -->
+        <include
+            layout="@layout/personal_contract_info_layout"
+            bind:viewModel="@{viewModel}"
+            bind:click="@{click}"/>
+
+        <!--    护理计划记录    -->
+        <include
+            layout="@layout/personal_nurse_plan_record_layout"
+            bind:viewModel="@{viewModel}"
+            bind:click="@{click}"/>
+
+        <!--    呼叫服务记录    -->
+        <include
+            layout="@layout/call_service_record_layout"
+            bind:viewModel="@{viewModel}"
+            bind:click="@{click}"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

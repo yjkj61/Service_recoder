@@ -28,3 +28,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Service_recoder"
 include ':app'
+include ':wheelview'
+include ':pickerview'

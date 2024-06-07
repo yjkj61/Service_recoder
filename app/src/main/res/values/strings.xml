@@ -9,4 +9,5 @@
     <string name="bed_number_str">号床</string>
     <string name="calling_str">呼叫中</string>
     <string name="sos_str">sos</string>
+    <string name="dangqianzhanghuyue"><u>当前账户余额</u></string>
 </resources>

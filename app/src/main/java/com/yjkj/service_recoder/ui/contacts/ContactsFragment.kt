@@ -11,6 +11,7 @@ import com.yjkj.service_recoder.library.utils.ext.dpToPx
 import com.yjkj.service_recoder.library.view.GridSpaceItemDecoration
 import com.yjkj.service_recoder.library.view.dialog.confirmDelDialog
 import com.yjkj.service_recoder.library.view.dialog.inputJobNumberDialog
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 
@@ -41,7 +42,7 @@ class ContactsFragment : BaseFragment() {
     override fun observer() {
         super.observer()
         lifecycleScope.launch {
-            viewModel.contactsItemClickFlow.collect{
+            viewModel.contactsItemClickFlow.collect {
                 activity?.confirmDelDialog(confirm = {
 
                 })

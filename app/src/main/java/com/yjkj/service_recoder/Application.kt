@@ -25,13 +25,17 @@ class Application : Application(), ViewModelStoreOwner {
         mAppViewModelStore = ViewModelStore()
     }
 
-    override val viewModelStore: ViewModelStore
-        get() = mAppViewModelStore
+//    override val viewModelStore: ViewModelStore
+//        get() = mAppViewModelStore
 
 
     companion object{
         @SuppressLint("StaticFieldLeak")
         lateinit var context : Context
+    }
+
+    override fun getViewModelStore(): ViewModelStore {
+        TODO("Not yet implemented")
     }
 
 }

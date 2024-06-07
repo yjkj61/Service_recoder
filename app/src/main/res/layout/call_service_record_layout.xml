@@ -6,22 +6,22 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryVieModel" />
+            type="com.yjkj.property_management.ui.page.personal.PersonalViewModel" />
         <variable
             name="click"
-            type="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryFragment.Click" />
+            type="com.yjkj.property_management.ui.page.personal.PersonalFragment.Click" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.276"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/white_bg_10_dp_corner_bg_shape"
-        app:layout_constraintStart_toStartOf="@+id/nurse_plan_record_layout"
-        app:layout_constraintEnd_toEndOf="@+id/nurse_plan_record_layout"
+        app:layout_constraintStart_toEndOf="@+id/personal_contracts_layout"
         app:layout_constraintTop_toBottomOf="@+id/nurse_plan_record_layout"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_option_layout">
+        app:layout_constraintBottom_toBottomOf="@+id/personal_info_layout">
 
         <TextView
             android:id="@+id/title_text"
@@ -36,7 +36,6 @@
             android:layout_marginStart="20dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/record_list"
             android:scrollbars="vertical"
             android:scrollbarThumbVertical="@drawable/call_service_scroll_bar_thumb_shape"
             android:scrollbarTrackVertical="@drawable/call_service_scroll_bar_track_shape"
@@ -46,14 +45,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="12dp"
             android:layout_width="0dp"
             android:layout_height="0dp"
             items="@{viewModel.callLogItems}"
             itemBinding="@{viewModel.callLogItemBinding}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

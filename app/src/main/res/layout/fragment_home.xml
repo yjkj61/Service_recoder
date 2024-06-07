@@ -54,7 +54,7 @@
         <include
             layout="@layout/home_page_card_layout"
             bind:viewModel="@{viewModel}"
-            bind:click="@{click}"/>
+            bind:click="@{click}" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

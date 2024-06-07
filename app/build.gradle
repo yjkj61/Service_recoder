@@ -63,6 +63,13 @@ android {
     dataBinding {
         enabled true
     }
+    viewBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -74,6 +81,8 @@ dependencies {
     api(Android.recyclerview)
     api(ThirdParty.glide.glide)
     api(ThirdParty.glide.transformations)
+    implementation project(path: ':wheelview')
+    implementation project(path: ':pickerview')
 
     kapt(ThirdParty.glide.kapt)
     api(ThirdParty.rxlifecycle.rxlifecycle)
@@ -115,4 +124,9 @@ dependencies {
     api(ThirdParty.circularprogressbar)
     api(ThirdParty.zxing.yipianfengye)
     api(ThirdParty.flexbox)
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'io.github.h07000223:flycoTabLayout:3.0.0'
+    //图表
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
