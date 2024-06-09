@@ -1,11 +1,11 @@
-package com.yjkj.property_management.java.utils
+package com.yjkj.service_recoder.java.utils
 
 import android.annotation.SuppressLint
 import android.icu.text.SimpleDateFormat
 import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.yjkj.property_management.Application
+import com.yjkj.service_recoder.MyApplication
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Date
@@ -28,7 +28,7 @@ fun Date.getTimeFormat(format : String = "yyyy-MM-dd"):String{
 }
 
 fun toast(msg : String){
-    ToastUtil.showToast(msg,Application.context.applicationContext)
+    ToastUtil.showToast(msg,MyApplication.context.applicationContext)
 }
 
 

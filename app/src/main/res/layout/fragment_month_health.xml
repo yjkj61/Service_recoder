@@ -38,7 +38,7 @@
                        android:gravity="center"
                        >
 
-                       <com.yjkj.property_management.java.diyView.QQStepView
+                       <com.yjkj.service_recoder.java.diyView.QQStepView
                            android:id="@+id/step_view"
                            android:layout_width="130dp"
                            android:layout_height="130dp"

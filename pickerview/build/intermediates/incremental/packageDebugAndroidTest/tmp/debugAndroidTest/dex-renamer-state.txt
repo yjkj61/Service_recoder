@@ -1,0 +1,4 @@
+#Sun Jun 09 11:28:50 HKT 2024
+base.0=D\:\\Git\\Service_recoder\\pickerview\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

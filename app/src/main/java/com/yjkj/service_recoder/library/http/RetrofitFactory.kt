@@ -4,7 +4,7 @@ import com.franmontiel.persistentcookiejar.ClearableCookieJar
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -68,13 +68,13 @@ object RetrofitFactory {
       fun getCookie(): ClearableCookieJar {
         return PersistentCookieJar(
             SetCookieCache(),
-            SharedPrefsCookiePersistor(Application.context)
+            SharedPrefsCookiePersistor(MyApplication.context)
         )
     }
 
     private fun getCache():Cache{
         //缓存100Mb
-        return Cache( File(Application.context.cacheDir, "cache")
+        return Cache( File(MyApplication.context.cacheDir, "cache")
             , 1024 * 1024 * 300)
     }
 

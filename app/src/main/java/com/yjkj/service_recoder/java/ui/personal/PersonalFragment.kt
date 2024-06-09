@@ -1,14 +1,14 @@
-package com.yjkj.property_management.ui.page.personal
+package com.yjkj.service_recoder.java.ui.personal
 
 import android.content.Intent
 import android.net.Uri
 import android.webkit.WebView
 import androidx.lifecycle.lifecycleScope
 import com.kunminx.architecture.ui.page.DataBindingConfig
-import com.yjkj.property_management.entity.OwnerEntity
-import com.yjkj.property_management.java.utils.toast
-import com.yjkj.property_management.ui.page.personal.item.CallLogItemViewModel.Companion.CLICK_TYPE_AGREE
-import com.yjkj.property_management.ui.page.personal.item.CallLogItemViewModel.Companion.CLICK_TYPE_DISAGREE
+import com.yjkj.service_recoder.java.entity.OwnerEntity
+import com.yjkj.service_recoder.java.utils.toast
+import com.yjkj.service_recoder.java.ui.personal.item.CallLogItemViewModel.Companion.CLICK_TYPE_AGREE
+import com.yjkj.service_recoder.java.ui.personal.item.CallLogItemViewModel.Companion.CLICK_TYPE_DISAGREE
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.java.base.BaseFragment
 import com.yjkj.service_recoder.java.base.nav

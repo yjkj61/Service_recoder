@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.yjkj.property_management.java.utils.toast
+import com.yjkj.service_recoder.java.utils.toast
 import com.yjkj.service_recoder.R
 
 class UserHabitAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

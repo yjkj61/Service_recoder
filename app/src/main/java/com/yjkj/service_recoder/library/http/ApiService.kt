@@ -1,14 +1,14 @@
 package com.yjkj.service_recoder.library.http
 
-import com.yjkj.property_management.entity.ApprovalAgencyCountEntity
-import com.yjkj.property_management.entity.AreaData
-import com.yjkj.property_management.entity.EmployeesNumberEntity
-import com.yjkj.property_management.entity.HomePageDataEntity
-import com.yjkj.property_management.entity.HouseAnalysisEntity
-import com.yjkj.property_management.entity.LoginEntity
-import com.yjkj.property_management.entity.OwnerEntity
-import com.yjkj.property_management.entity.ServingNumberEntity
-import com.yjkj.property_management.entity.UserInfoStatusEntity
+import com.yjkj.service_recoder.java.entity.ApprovalAgencyCountEntity
+import com.yjkj.service_recoder.java.entity.AreaData
+import com.yjkj.service_recoder.java.entity.EmployeesNumberEntity
+import com.yjkj.service_recoder.java.entity.HomePageDataEntity
+import com.yjkj.service_recoder.java.entity.HouseAnalysisEntity
+import com.yjkj.service_recoder.java.entity.LoginEntity
+import com.yjkj.service_recoder.java.entity.OwnerEntity
+import com.yjkj.service_recoder.java.entity.ServingNumberEntity
+import com.yjkj.service_recoder.java.entity.UserInfoStatusEntity
 import okhttp3.RequestBody
 import retrofit2.http.Body
 import retrofit2.http.GET

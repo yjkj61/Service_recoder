@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import com.yjkj.service_recoder.R
 
 class DeviceInfoAdapter :RecyclerView.Adapter<DeviceInfoAdapter.ViewHolder>() {
@@ -36,8 +36,8 @@ class DeviceInfoAdapter :RecyclerView.Adapter<DeviceInfoAdapter.ViewHolder>() {
      */
     @SuppressLint("ResourceAsColor")
     fun setDeviceStatus(holder: ViewHolder, status : Int){
-        val colorForWhite = Application.context.resources.getColorStateList(R.color.white, null)
-        val colorFor777777 = Application.context.resources.getColorStateList(R.color.color_777777, null)
+        val colorForWhite = MyApplication.context.resources.getColorStateList(R.color.white, null)
+        val colorFor777777 = MyApplication.context.resources.getColorStateList(R.color.color_777777, null)
         when(status){
             0->{
 

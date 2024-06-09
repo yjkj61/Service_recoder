@@ -1,0 +1,8 @@
+com.bigkoo.pickerview.test.pickerview-jetified-core-1.5.0-0 C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res
+com.bigkoo.pickerview.test.pickerview-jetified-annotation-experimental-1.1.0-1 C:\Users\jhw\.gradle\caches\transforms-3\cec46b31985bfe85bcbece5d645a6bb5\transformed\jetified-annotation-experimental-1.1.0\res
+com.bigkoo.pickerview.test.pickerview-androidTest-2 D:\Git\Service_recoder\pickerview\build\generated\res\resValues\androidTest\debug
+com.bigkoo.pickerview.test.pickerview-mergeDebugAndroidTestResources-3 D:\Git\Service_recoder\pickerview\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.bigkoo.pickerview.test.pickerview-mergeDebugAndroidTestResources-4 D:\Git\Service_recoder\pickerview\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.bigkoo.pickerview.test.pickerview-merged_res-5 D:\Git\Service_recoder\pickerview\build\intermediates\merged_res\debugAndroidTest
+com.bigkoo.pickerview.test.pickerview-packaged_res-6 D:\Git\Service_recoder\pickerview\build\intermediates\packaged_res\debug
+com.bigkoo.pickerview.test.pickerview-packaged_res-7 D:\Git\Service_recoder\wheelview\build\intermediates\packaged_res\debug

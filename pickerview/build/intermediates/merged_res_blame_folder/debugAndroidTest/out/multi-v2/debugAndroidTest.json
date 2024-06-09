@@ -1,0 +1,153 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.bigkoo.pickerview.test.pickerview-merged_res-5:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\Git\\Service_recoder\\pickerview\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,32,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,106,168,224,281,345,406,455,500,547,596,643,692,741,787,1462,1738",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,31,35,39",
+                        "endColumns": "50,61,55,56,63,60,48,44,46,48,46,48,48,45,12,12,12",
+                        "endOffsets": "101,163,219,276,340,401,450,495,542,591,638,687,736,782,1457,1733,2009"
+                    },
+                    "to": {
+                        "startLines": "11,12,13,14,15,16,18,19,20,21,22,23,24,25,40,56,60",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "622,673,735,791,848,912,1020,1069,1114,1161,1210,1257,1306,1355,2143,2818,3094",
+                        "endLines": "11,12,13,14,15,16,18,19,20,21,22,23,24,25,55,59,63",
+                        "endColumns": "50,61,55,56,63,60,48,44,46,48,46,48,48,45,12,12,12",
+                        "endOffsets": "668,730,786,843,907,968,1064,1109,1156,1205,1252,1301,1350,1396,2813,3089,3365"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jhw\\.gradle\\caches\\transforms-3\\7c718c79780a796e4eccb65a08a84ed0\\transformed\\jetified-core-1.5.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,11",
+                        "startColumns": "0,0",
+                        "startOffsets": "176,544",
+                        "endLines": "10,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "543,909"
+                    },
+                    "to": {
+                        "startLines": "26,33",
+                        "startColumns": "4,4",
+                        "startOffsets": "1401,1773",
+                        "endLines": "32,39",
+                        "endColumns": "8,8",
+                        "endOffsets": "1768,2138"
+                    }
+                },
+                {
+                    "source": "D:\\Git\\Service_recoder\\wheelview\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,118,181,236,293,350,408,480,553,912,959",
+                        "endLines": "2,3,4,5,6,7,8,9,10,16,29",
+                        "endColumns": "62,62,54,56,56,57,71,72,68,46,24",
+                        "endOffsets": "113,176,231,288,345,403,475,548,617,954,1589"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,17,64",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,118,181,236,293,350,408,480,553,973,3370",
+                        "endLines": "2,3,4,5,6,7,8,9,10,17,76",
+                        "endColumns": "62,62,54,56,56,57,71,72,68,46,24",
+                        "endOffsets": "113,176,231,288,345,403,475,548,617,1015,4000"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.bigkoo.pickerview.test.pickerview-merged_res-5:/values-v18_values-v18.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\jhw\\.gradle\\caches\\transforms-3\\7c718c79780a796e4eccb65a08a84ed0\\transformed\\jetified-core-1.5.0\\res\\values-v18\\values.xml",
+                    "from": {
+                        "startLines": "4,12",
+                        "startColumns": "0,0",
+                        "startOffsets": "180,596",
+                        "endLines": "11,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "595,1009"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,475",
+                        "endLines": "9,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "470,888"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.bigkoo.pickerview.test.pickerview-merged_res-5:/values-v21_values-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\jhw\\.gradle\\caches\\transforms-3\\7c718c79780a796e4eccb65a08a84ed0\\transformed\\jetified-core-1.5.0\\res\\values-v21\\values.xml",
+                    "from": {
+                        "startLines": "4,13",
+                        "startColumns": "0,0",
+                        "startOffsets": "180,655",
+                        "endLines": "12,21",
+                        "endColumns": "8,8",
+                        "endOffsets": "654,1127"
+                    },
+                    "to": {
+                        "startLines": "2,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,534",
+                        "endLines": "10,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "529,1006"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.bigkoo.pickerview.test.pickerview-merged_res-5:/values-en_values-en.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\Git\\Service_recoder\\pickerview\\build\\intermediates\\packaged_res\\debug\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,153,200,249,296,345,399",
+                        "endColumns": "52,44,46,48,46,48,53,45",
+                        "endOffsets": "103,148,195,244,291,340,394,440"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.bigkoo.pickerview.test.pickerview-merged_res-5:/values-v28_values-v28.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\jhw\\.gradle\\caches\\transforms-3\\7c718c79780a796e4eccb65a08a84ed0\\transformed\\jetified-core-1.5.0\\res\\values-v28\\values.xml",
+                    "from": {
+                        "startLines": "4,13",
+                        "startColumns": "0,0",
+                        "startOffsets": "180,659",
+                        "endLines": "12,21",
+                        "endColumns": "8,8",
+                        "endOffsets": "658,1135"
+                    },
+                    "to": {
+                        "startLines": "2,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,538",
+                        "endLines": "10,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "533,1014"
+                    }
+                }
+            ]
+        }
+    ]
+}

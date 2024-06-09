@@ -4,7 +4,7 @@
 * @desc 管理sdk以及项目版本
 */
 object Version {
-    const val compileSdkVersion = 33
+    const val compileSdkVersion = 34
     const val buildToolsVersion = "33.0.0"
     const val minSdkVersion = 24
     const val targetSdkVersion = 33

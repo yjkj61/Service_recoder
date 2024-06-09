@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.1.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\jhw\.gradle\caches\transforms-3\cec46b31985bfe85bcbece5d645a6bb5\transformed\jetified-annotation-experimental-1.1.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.annotation:annotation-experimental:1.1.0" from-dependency="true" generated-set="androidx.annotation:annotation-experimental:1.1.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\jhw\.gradle\caches\transforms-3\cec46b31985bfe85bcbece5d645a6bb5\transformed\jetified-annotation-experimental-1.1.0\res"><file path="C:\Users\jhw\.gradle\caches\transforms-3\cec46b31985bfe85bcbece5d645a6bb5\transformed\jetified-annotation-experimental-1.1.0\res\values\values.xml" qualifiers=""/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.test:core:1.5.0$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidx.test:core:1.5.0" from-dependency="true" generated-set="androidx.test:core:1.5.0$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res"><file path="C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res\values\values.xml" qualifiers=""><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file><file path="C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res\values-v18\values.xml" qualifiers="v18"><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file><file path="C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res\values-v21\values.xml" qualifiers="v21"><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file><file path="C:\Users\jhw\.gradle\caches\transforms-3\7c718c79780a796e4eccb65a08a84ed0\transformed\jetified-core-1.5.0\res\values-v28\values.xml" qualifiers="v28"><style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Material.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style><style name="WhiteBackgroundTheme" parent="@android:style/Theme.Material.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":wheelview$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\build\intermediates\packaged_res\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config=":wheelview" from-dependency="true" generated-set=":wheelview$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\build\intermediates\packaged_res\debug"><file path="D:\Git\Service_recoder\wheelview\build\intermediates\packaged_res\debug\values\values.xml" qualifiers=""><color name="pickerview_bgColor_default">#FFFFFFFF</color><color name="pickerview_bgColor_overlay">#60000000</color><color name="pickerview_bg_topbar">#f5f5f5</color><color name="pickerview_timebtn_nor">#057dff</color><color name="pickerview_timebtn_pre">#c2daf5</color><color name="pickerview_topbar_title">#000000</color><color name="pickerview_wheelview_textcolor_center">#2a2a2a</color><color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color><color name="pickerview_wheelview_textcolor_out">#a8a8a8</color><dimen name="pickerview_textsize">20sp</dimen><dimen name="pickerview_topbar_btn_textsize">17sp</dimen><dimen name="pickerview_topbar_height">44dp</dimen><dimen name="pickerview_topbar_padding">20dp</dimen><dimen name="pickerview_topbar_title_textsize">18sp</dimen><string name="app_name">wheelview</string><declare-styleable name="pickerview">
+        <attr name="wheelview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr format="dimension" name="wheelview_textSize"/>
+        <attr format="color" name="wheelview_textColorOut"/>
+        <attr format="color" name="wheelview_textColorCenter"/>
+        <attr format="color" name="wheelview_dividerColor"/>
+        <attr format="dimension" name="wheelview_dividerWidth"/>
+        <attr format="float" name="wheelview_lineSpacingMultiplier"/>
+    </declare-styleable></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTest$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\src\androidTest\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTest" generated-set="androidTest$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\src\androidTest\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTestDebug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\src\androidTestDebug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="androidTestDebug" generated-set="androidTestDebug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\src\androidTestDebug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\build\generated\res\resValues\androidTest\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Git\Service_recoder\wheelview\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="pickerview">
+        <attr name="wheelview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr format="dimension" name="wheelview_textSize"/>
+        <attr format="color" name="wheelview_textColorOut"/>
+        <attr format="color" name="wheelview_textColorCenter"/>
+        <attr format="color" name="wheelview_dividerColor"/>
+        <attr format="dimension" name="wheelview_dividerWidth"/>
+        <attr format="float" name="wheelview_lineSpacingMultiplier"/>
+    </declare-styleable></configuration></mergedItems></merger>

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import com.yjkj.service_recoder.BR
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.library.base.BaseViewModel
@@ -43,14 +43,14 @@ class UserInfoViewModel : BaseViewModel() {
 
     //警惕疾病列表
     val alertDiseaseLayoutManager = ObservableField<FlexboxLayoutManager>().apply {
-        set(FlexboxLayoutManager(Application.context,FlexDirection.ROW))
+        set(FlexboxLayoutManager(MyApplication.context,FlexDirection.ROW))
     }
     val alertDiseaseItems = ObservableArrayList<MedicalItemTagViewModel>()
     val alertDiseaseItemBinding = ItemBinding.of<MedicalItemTagViewModel>(BR.viewModel,R.layout.alert_disease_item_layout)
 
     //定期检查列表
     val regularCheckingLayoutManager = ObservableField<FlexboxLayoutManager>().apply {
-        set(FlexboxLayoutManager(Application.context,FlexDirection.ROW))
+        set(FlexboxLayoutManager(MyApplication.context,FlexDirection.ROW))
     }
     val regularCheckingItems = ObservableArrayList<MedicalItemTagViewModel>()
     val regularCheckingItemBinding = ItemBinding.of<MedicalItemTagViewModel>(BR.viewModel,R.layout.regular_checking_item_layout)

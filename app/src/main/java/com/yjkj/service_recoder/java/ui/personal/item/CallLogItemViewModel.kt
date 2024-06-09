@@ -1,7 +1,7 @@
-package com.yjkj.property_management.ui.page.personal.item
+package com.yjkj.service_recoder.java.ui.personal.item
 
 import androidx.databinding.ObservableField
-import com.yjkj.property_management.ui.page.personal.PersonalViewModel
+import com.yjkj.service_recoder.java.ui.personal.PersonalViewModel
 
 class CallLogItemViewModel(val viewModel: PersonalViewModel) {
 

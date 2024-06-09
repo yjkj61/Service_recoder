@@ -1,4 +1,4 @@
-package com.yjkj.property_management.library.http.utils
+package com.yjkj.service_recoder.java.http.utils
 
 object JsonUtil {
     /**

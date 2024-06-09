@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yjkj.service_recoder.ui.usersecondary.items.CallLogItemViewModel" />
+            type="com.yjkj.service_recoder.java.ui.personal.item.CallLogItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView

@@ -1,7 +1,7 @@
 package com.yjkj.service_recoder.library.utils
 
 
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
@@ -10,7 +10,7 @@ import java.io.InputStreamReader
 object AssetReader {
 
     fun readAssetFile(fileName : String):String{
-        val context = Application.context
+        val context = MyApplication.context
         val stringBuilder = StringBuilder()
         try {
             // 打开assets文件夹下的文件
@@ -36,7 +36,7 @@ object AssetReader {
 
 
     fun readAssetFileByIn(fileName: String): InputStream {
-        return Application.context.assets.open(fileName)
+        return MyApplication.context.assets.open(fileName)
     }
 
 }

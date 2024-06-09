@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yjkj.property_management.ui.page.personal.item.UserContactsItemViewModel" />
+            type="com.yjkj.service_recoder.java.ui.personal.item.UserContactsItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView

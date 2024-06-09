@@ -31,7 +31,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import com.yjkj.service_recoder.R
 
 /**
@@ -189,12 +189,12 @@ fun ViewPager.doSelected(selected: (Int) -> Unit) {
  */
 @RequiresApi(Build.VERSION_CODES.M)
 fun TextView.textColor(color : Int){
-    val colorStateList = Application.context.resources.getColorStateList(color, null)
+    val colorStateList = MyApplication.context.resources.getColorStateList(color, null)
     this.setTextColor(colorStateList)
 }
 
 fun TextView.hintColor(color: Int){
-    val colorStateList = Application.context.resources.getColorStateList(color, null)
+    val colorStateList = MyApplication.context.resources.getColorStateList(color, null)
     this.setHintTextColor(colorStateList)
 }
 
@@ -225,7 +225,7 @@ fun ImageView.loadSrc(res : Any?){
 }
 
 fun ImageView.thumb(res : Any?){
-    Glide.with(Application.context.applicationContext)
+    Glide.with(MyApplication.context.applicationContext)
         .setDefaultRequestOptions(
             RequestOptions()
                 .frame(1000000)
@@ -255,7 +255,7 @@ fun ImageView.loadAvatar(str: Any){
 }
 
 fun ImageView.loadBase64(base64 : Any){
-    Glide.with(Application.context.applicationContext)
+    Glide.with(MyApplication.context.applicationContext)
         .load("data:image/jpg;base64,${base64}")
         .circleCrop()
         .into(this)
@@ -312,7 +312,7 @@ fun clickNoRepeat2(interval: Long = 500 , onClick: () -> Unit){
  * 复制剪切板
  */
 fun String.copy() {
-    val clip = Application.context.applicationContext.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    val clip = MyApplication.context.applicationContext.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
     clip.text = this
     toast("复制成功",Toast.LENGTH_SHORT)
 }
@@ -366,7 +366,7 @@ fun EditText.keyBoardSearch(onClick: () -> Unit) {
  * 返回的单位为像素
  */
 fun dp(id : Int):Int{
-    return Application.context.resources.getDimensionPixelSize(id)
+    return MyApplication.context.resources.getDimensionPixelSize(id)
 }
 
 /**
@@ -374,7 +374,7 @@ fun dp(id : Int):Int{
  */
 fun Drawable.tintDrawable(color : Int){
     val wrap = DrawableCompat.wrap(this)
-    DrawableCompat.setTint(wrap, ContextCompat.getColor(Application.context,color))
+    DrawableCompat.setTint(wrap, ContextCompat.getColor(MyApplication.context,color))
 }
 
 /**

@@ -1,14 +1,14 @@
-package com.yjkj.property_management.ui.page.personal
+package com.yjkj.service_recoder.java.ui.personal
 
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableField
 
-import com.yjkj.property_management.entity.ContactsUserEntity
-import com.yjkj.property_management.entity.OwnerEntity
-import com.yjkj.property_management.java.utils.ifNull
-import com.yjkj.property_management.ui.page.homePageFragment.secondHomePage.repo.PersonalRepo
-import com.yjkj.property_management.ui.page.personal.item.CallLogItemViewModel
-import com.yjkj.property_management.ui.page.personal.item.UserContactsItemViewModel
+import com.yjkj.service_recoder.java.entity.ContactsUserEntity
+import com.yjkj.service_recoder.java.entity.OwnerEntity
+import com.yjkj.service_recoder.java.utils.ifNull
+import com.yjkj.service_recoder.java.ui.personal.repo.PersonalRepo
+import com.yjkj.service_recoder.java.ui.personal.item.CallLogItemViewModel
+import com.yjkj.service_recoder.java.ui.personal.item.UserContactsItemViewModel
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.library.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow

@@ -44,7 +44,7 @@ class HomeFragment : BaseFragment() {
         //点击用户item
         lifecycleScope.launch {
             viewModel.userItemClickFlow.collect{
-                nav().navigate(R.id.userSecondaryFragment)
+//                nav().navigate(R.id.userSecondaryFragment)
             }
         }
     }

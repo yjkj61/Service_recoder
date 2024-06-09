@@ -26,11 +26,6 @@
         android:label="fragment_edit_user_info"
         tools:layout="@layout/fragment_edit_user_info" />
     <fragment
-        android:id="@+id/userSecondaryFragment"
-        android:name="com.yjkj.service_recoder.ui.usersecondary.UserSecondaryFragment"
-        android:label="fragment_user_secondary"
-        tools:layout="@layout/fragment_user_secondary" />
-    <fragment
         android:id="@+id/servicePunchFragment"
         android:name="com.yjkj.service_recoder.ui.servicepunch.ServicePunchFragment"
         android:label="fragment_service_punch"

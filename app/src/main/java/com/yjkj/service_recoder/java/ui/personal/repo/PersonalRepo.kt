@@ -1,4 +1,4 @@
-package com.yjkj.property_management.ui.page.homePageFragment.secondHomePage.repo
+package com.yjkj.service_recoder.java.ui.personal.repo
 
 import com.yjkj.service_recoder.library.base.BaseRepository
 import com.yjkj.service_recoder.library.http.ApiContents

@@ -1,11 +1,11 @@
-package com.yjkj.property_management.ui.page.personal.item
+package com.yjkj.service_recoder.java.ui.personal.item
 
 import android.database.Observable
 import androidx.databinding.ObservableField
-import com.yjkj.property_management.entity.ContactsUserEntity
-import com.yjkj.property_management.ui.page.personal.PersonalViewModel
+import com.yjkj.service_recoder.java.entity.ContactsUserEntity
+import com.yjkj.service_recoder.java.ui.personal.PersonalViewModel
 
-class UserContactsItemViewModel(val viewModel: PersonalViewModel,data : ContactsUserEntity) {
+class UserContactsItemViewModel(val viewModel: PersonalViewModel, data : ContactsUserEntity) {
 
     val userRelation = ObservableField(data.contactsJobName)
     val userRelationName = ObservableField(data.contactsName)
