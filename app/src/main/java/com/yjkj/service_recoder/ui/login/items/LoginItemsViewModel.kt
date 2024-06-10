@@ -15,7 +15,7 @@ class LoginItemsViewModel(val viewModel: LoginViewModel, data : Triple<Int, Stri
     val leftIcon = ObservableField(data.first)
     val type = ObservableField("请输入${data.second}")
 
-    val content = ObservableField("")
+    val content = ObservableField("1")
 
     val inputType = ObservableField(data.third)
 

@@ -1,10 +1,10 @@
-package com.example.medicalservice.activity.active
+package com.yjkj.service_recoder.java.ui;
 
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.medicalservice.bean.HomeBannerEntity
-import com.example.medicalservice.bean.Row
+import com.yjkj.service_recoder.java.bean.HomeBannerEntity
+import com.yjkj.service_recoder.java.bean.Row
 import com.google.gson.Gson
 import com.yjkj.service_recoder.databinding.ActivityActiveListBinding
 import com.yjkj.service_recoder.java.adapter.ActiveListAdapter

@@ -1,4 +1,4 @@
-package com.example.medicalservice.bean
+package com.yjkj.service_recoder.java.bean
 
 import java.io.Serializable
 

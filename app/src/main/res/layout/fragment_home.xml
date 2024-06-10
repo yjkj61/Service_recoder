@@ -14,14 +14,15 @@
             type="com.yjkj.service_recoder.ui.homepage.HomeFragment.Click" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.homepage.HomeFragment"
         android:paddingTop="10dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
 
         <ImageButton
             android:id="@+id/back_icon_btn"
@@ -30,32 +31,74 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/group_236"/>
-        <!--   首页房间信息     -->
-        <include
-            layout="@layout/home_page_room_info_layout"
-            bind:viewModel="@{viewModel}"
-            bind:click="@{click}"/>
-        <!--    首页用户列表    -->
-        <include
-            layout="@layout/home_page_user_info_list_layout"
-            bind:viewModel="@{viewModel}"
-            bind:click="@{click}"/>
-        <!--    首页天气信息    -->
-        <include
-            layout="@layout/home_page_weather_info_layout"
-            bind:viewModel="@{viewModel}"
-            bind:click="@{click}"/>
-        <!--     设置   -->
-        <include
-            layout="@layout/settings_layout"
-            bind:viewModel="@{viewModel}"
-            bind:click="@{click}"/>
-        <!--    首页卡片布局    -->
-        <include
-            layout="@layout/home_page_card_layout"
-            bind:viewModel="@{viewModel}"
-            bind:click="@{click}" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
+                <!--   首页房间信息     -->
+                <include
+                    layout="@layout/home_page_room_info_layout"
+                    bind:viewModel="@{viewModel}"
+                    bind:click="@{click}"/>
+                <!--    首页用户列表    -->
+                <include
+                    layout="@layout/home_page_user_info_list_layout"
+                    bind:viewModel="@{viewModel}"
+                    bind:click="@{click}"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <!--    首页天气信息    -->
+                    <include
+                        layout="@layout/home_page_weather_info_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.1"
+                        bind:viewModel="@{viewModel}"
+                        bind:click="@{click}"/>
+                    <!--     设置   -->
+                    <include
+                        layout="@layout/settings_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        bind:viewModel="@{viewModel}"
+                        bind:click="@{click}"/>
+
+                </LinearLayout>
+
+                <!--    首页卡片布局    -->
+                <include
+                    layout="@layout/home_page_card_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    bind:viewModel="@{viewModel}"
+                    bind:click="@{click}" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </layout>

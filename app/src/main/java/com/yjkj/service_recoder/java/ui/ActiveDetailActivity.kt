@@ -1,7 +1,7 @@
-package com.example.medicalservice.activity.active
+package com.yjkj.service_recoder.java.ui;
 
 import android.text.Html
-import com.example.medicalservice.bean.Row
+import com.yjkj.service_recoder.java.bean.Row
 import com.google.gson.Gson
 import com.yjkj.service_recoder.databinding.ActivityActiveDetailBinding
 import com.yjkj.service_recoder.java.base.BaseActivity

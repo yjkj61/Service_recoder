@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.medicalservice.bean.Row
+import com.yjkj.service_recoder.java.bean.Row
 import com.yjkj.service_recoder.R
 
 private typealias OnActiveListItemClickCallback = (Row)->Unit

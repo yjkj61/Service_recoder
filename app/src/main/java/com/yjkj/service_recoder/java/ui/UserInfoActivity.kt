@@ -723,7 +723,7 @@ class UserInfoActivity : BaseActivity<ActivityUserInfoBinding>() {
 //            }
             //ziliSpinner.setSelection(ziliSelection)
             //ziliEdittext.setText("${getSelfAssess(userInfoData.ownerSelfAssess.toString())}")
-//            val ownerNurseAdapter = ArrayAdapter(this@UserInfoActivity,com.example.medicalservice.R.layout.spinner_dropdown_item,ownerNurseSpinnerList)
+//            val ownerNurseAdapter = ArrayAdapter(this@UserInfoActivity,com.yjkj.service_recoder.java.R.layout.spinner_dropdown_item,ownerNurseSpinnerList)
 //            nurseLevelSpinner.adapter = ownerNurseAdapter
 //            ownerNurseSpinnerList.forEachIndexed loop@{ index, s ->
 //                if(userInfoData.ownerNurseAssess.ifNull { "" } == s){

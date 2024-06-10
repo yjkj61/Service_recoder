@@ -18,12 +18,10 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.medicalservice.activity.ArticleListActivity;
-import com.example.medicalservice.activity.active.ActiveListActivity;
-import com.example.medicalservice.bean.ADRow;
-import com.example.medicalservice.bean.HomeAdBannerEntity;
-import com.example.medicalservice.bean.HomeBannerEntity;
-import com.example.medicalservice.bean.Row;
+import com.yjkj.service_recoder.java.bean.ADRow;
+import com.yjkj.service_recoder.java.bean.HomeAdBannerEntity;
+import com.yjkj.service_recoder.java.bean.HomeBannerEntity;
+import com.yjkj.service_recoder.java.bean.Row;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -42,6 +40,8 @@ import com.yjkj.service_recoder.java.bean.BannerHomeBean;
 import com.yjkj.service_recoder.java.bean.ProperTypeBean;
 import com.yjkj.service_recoder.java.http.OkHttpUtil;
 import com.yjkj.service_recoder.java.http.medicalservice.API;
+import com.yjkj.service_recoder.java.ui.ActiveListActivity;
+import com.yjkj.service_recoder.java.ui.ArticleListActivity;
 import com.youth.banner.listener.OnPageChangeListener;
 
 import org.json.JSONException;
@@ -92,7 +92,7 @@ public class PropertyFiveBlessings extends BaseActivity<FragmentPropertyFiveBles
             go(OrderView.class);
         });
 
-        initBanner();
+//        initBanner();
     }
 
     @Override

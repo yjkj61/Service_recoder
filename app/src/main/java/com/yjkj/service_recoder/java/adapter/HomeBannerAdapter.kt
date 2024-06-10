@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.medicalservice.bean.Row
+import com.yjkj.service_recoder.java.bean.Row
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.java.utils.GlideUtils
 import com.youth.banner.adapter.BannerAdapter

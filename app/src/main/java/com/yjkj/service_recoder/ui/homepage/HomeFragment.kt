@@ -1,5 +1,6 @@
 package com.yjkj.service_recoder.ui.homepage
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.ActionProvider.VisibilityListener
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import com.kunminx.architecture.ui.page.DataBindingConfig
 import com.yjkj.service_recoder.BR
 
 import com.yjkj.service_recoder.R
+import com.yjkj.service_recoder.java.ui.CateringServices
+import com.yjkj.service_recoder.java.ui.property.PropertyFiveBlessings
 import com.yjkj.service_recoder.library.base.BaseFragment
 import com.yjkj.service_recoder.library.base.nav
 import com.yjkj.service_recoder.library.utils.ext.toast
@@ -83,7 +86,8 @@ class HomeFragment : BaseFragment() {
 
         //餐饮
         fun catering(){
-
+            var intent = Intent(activity, CateringServices::class.java)
+            startActivity(intent)
         }
 
         //购物
@@ -93,7 +97,8 @@ class HomeFragment : BaseFragment() {
 
         //智慧服务
         fun wisdomService(){
-
+            var intent = Intent(activity, PropertyFiveBlessings::class.java)
+            startActivity(intent)
         }
 
         //联系人列表

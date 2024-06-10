@@ -22,7 +22,7 @@ class LoginViewModel : BaseViewModel() {
     val loginItems = ObservableArrayList<LoginItemsViewModel>()
     val loginItemBinding = ItemBinding.of<LoginItemsViewModel>(BR.viewModel,R.layout.login_item_layout)
 
-    val loginBtnEnable = ObservableField(false)
+    val loginBtnEnable = ObservableField(true)
 
     val checkedUsername = ObservableField(UserLoginHelper.checkedUsername())
     val checkedPassword = ObservableField(UserLoginHelper.checkedPassword())
@@ -33,42 +33,42 @@ class LoginViewModel : BaseViewModel() {
         loginItems.add(LoginItemsViewModel(this,Triple(R.drawable.group_308,"密码",0x000000e1)))
         loginItems.add(LoginItemsViewModel(this,Triple(R.drawable.group_309,"房间号",0x00000001)))
 
-        loginItems[0].apply {
-            content.set(UserLoginHelper.username())
-            textChangedCallback {
-                val item1 = loginItems[1]
-                val item2 = loginItems[2]
-                if(it.isNotEmpty() && item1.content.get().toString().isNotEmpty() && item2.content.get().toString().isNotEmpty()){
-                    loginBtnEnable.set(true)
-                }else{
-                    loginBtnEnable.set(false)
-                }
-            }
-        }
-        loginItems[1].apply {
-            content.set(UserLoginHelper.userpwd())
-            textChangedCallback {
-                val item0 = loginItems[0]
-                val item2 = loginItems[2]
-                if(it.isNotEmpty() && item0.content.get().toString().isNotEmpty() && item2.content.get().toString().isNotEmpty()){
-                    loginBtnEnable.set(true)
-                }else{
-                    loginBtnEnable.set(false)
-                }
-            }
-        }
-        loginItems[2].apply {
-            content.set(UserLoginHelper.userroomid())
-            textChangedCallback {
-                val item0 = loginItems[0]
-                val item1 = loginItems[1]
-                if(it.isNotEmpty() && item0.content.get().toString().isNotEmpty() && item1.content.get().toString().isNotEmpty()){
-                    loginBtnEnable.set(true)
-                }else{
-                    loginBtnEnable.set(false)
-                }
-            }
-        }
+//        loginItems[0].apply {
+//            content.set(UserLoginHelper.username())
+//            textChangedCallback {
+//                val item1 = loginItems[1]
+//                val item2 = loginItems[2]
+//                if(it.isNotEmpty() && item1.content.get().toString().isNotEmpty() && item2.content.get().toString().isNotEmpty()){
+//                    loginBtnEnable.set(true)
+//                }else{
+//                    loginBtnEnable.set(false)
+//                }
+//            }
+//        }
+//        loginItems[1].apply {
+//            content.set(UserLoginHelper.userpwd())
+//            textChangedCallback {
+//                val item0 = loginItems[0]
+//                val item2 = loginItems[2]
+//                if(it.isNotEmpty() && item0.content.get().toString().isNotEmpty() && item2.content.get().toString().isNotEmpty()){
+//                    loginBtnEnable.set(true)
+//                }else{
+//                    loginBtnEnable.set(false)
+//                }
+//            }
+//        }
+//        loginItems[2].apply {
+//            content.set(UserLoginHelper.userroomid())
+//            textChangedCallback {
+//                val item0 = loginItems[0]
+//                val item1 = loginItems[1]
+//                if(it.isNotEmpty() && item0.content.get().toString().isNotEmpty() && item1.content.get().toString().isNotEmpty()){
+//                    loginBtnEnable.set(true)
+//                }else{
+//                    loginBtnEnable.set(false)
+//                }
+//            }
+//        }
     }
 
     val checkedChangeListener = OnCheckedChangeListener { compoundButton , p1 ->
@@ -86,31 +86,31 @@ class LoginViewModel : BaseViewModel() {
     }
 
     fun login(success : ()->Unit = {}){
-        val username =  loginItems[0].content.get() ?: return
-        val password =  loginItems[1].content.get() ?: return
-        val roomId =  loginItems[2].content.get() ?: return
-
-        if(checkedUsername.get() == true){
-            UserLoginHelper.checkedUsername(true)
-            UserLoginHelper.username(username)
-        }else{
-            UserLoginHelper.username("")
-            UserLoginHelper.checkedUsername(false)
-        }
-        if(checkedPassword.get() == true){
-            UserLoginHelper.checkedPassword(true)
-            UserLoginHelper.userpwd(password)
-        }else{
-            UserLoginHelper.userpwd("")
-            UserLoginHelper.checkedPassword(false)
-        }
-        if(checkedPassword.get() == true){
-            UserLoginHelper.checkedRoomId(true)
-            UserLoginHelper.userroomid(roomId)
-        }else{
-            UserLoginHelper.userroomid("")
-            UserLoginHelper.checkedRoomId(false)
-        }
+//        val username =  loginItems[0].content.get() ?: return
+//        val password =  loginItems[1].content.get() ?: return
+//        val roomId =  loginItems[2].content.get() ?: return
+//
+//        if(checkedUsername.get() == true){
+//            UserLoginHelper.checkedUsername(true)
+//            UserLoginHelper.username(username)
+//        }else{
+//            UserLoginHelper.username("")
+//            UserLoginHelper.checkedUsername(false)
+//        }
+//        if(checkedPassword.get() == true){
+//            UserLoginHelper.checkedPassword(true)
+//            UserLoginHelper.userpwd(password)
+//        }else{
+//            UserLoginHelper.userpwd("")
+//            UserLoginHelper.checkedPassword(false)
+//        }
+//        if(checkedPassword.get() == true){
+//            UserLoginHelper.checkedRoomId(true)
+//            UserLoginHelper.userroomid(roomId)
+//        }else{
+//            UserLoginHelper.userroomid("")
+//            UserLoginHelper.checkedRoomId(false)
+//        }
 
         success.invoke()
 

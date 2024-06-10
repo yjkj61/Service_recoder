@@ -1,10 +1,10 @@
-package com.example.medicalservice.activity
+package com.yjkj.service_recoder.java.ui
 
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.medicalservice.bean.HomeBannerEntity
-import com.example.medicalservice.bean.Row
+import com.yjkj.service_recoder.java.bean.HomeBannerEntity
+import com.yjkj.service_recoder.java.bean.Row
 import com.google.gson.Gson
 import com.gyf.immersionbar.BarHide
 import com.gyf.immersionbar.ImmersionBar
