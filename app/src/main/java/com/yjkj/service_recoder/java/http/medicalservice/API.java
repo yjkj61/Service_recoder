@@ -30,7 +30,7 @@ public class API {
 
     public static String addUser = hostSelf + "/sms/register";
 
-    public static String login = hostAuth + "/custom/login";
+    public static String login = hostAuth + "/serviceRecord/login";
 
     public static String seedMsg = hostSelf + "/sms/send";
 

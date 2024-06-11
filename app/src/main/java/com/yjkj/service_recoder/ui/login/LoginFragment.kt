@@ -31,6 +31,7 @@ class LoginFragment : BaseFragment() {
     inner class Click{
         fun login(){
             viewModel.login{
+                toast("登陆成功")
                 navTo(R.id.homeFragment,R.id.loginFragment)
             }
         }

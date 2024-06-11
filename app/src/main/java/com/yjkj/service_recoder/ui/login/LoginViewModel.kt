@@ -6,13 +6,24 @@ import android.widget.CompoundButton
 import android.widget.CompoundButton.OnCheckedChangeListener
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableField
+import com.google.gson.Gson
 import com.yjkj.service_recoder.BR
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.data.UserLoginHelper
+import com.yjkj.service_recoder.java.bean.ApplyActiveEntity
+import com.yjkj.service_recoder.java.data.UserDataHelper
+import com.yjkj.service_recoder.java.entity.LoginEntity
+import com.yjkj.service_recoder.java.http.OkHttpUtil
+import com.yjkj.service_recoder.java.http.medicalservice.API
 import com.yjkj.service_recoder.library.base.BaseViewModel
 import com.yjkj.service_recoder.library.utils.ext.toast
 import com.yjkj.service_recoder.ui.login.items.LoginItemsViewModel
 import me.tatarka.bindingcollectionadapter2.ItemBinding
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.Response
+import org.json.JSONObject
+import java.io.IOException
 
 class LoginViewModel : BaseViewModel() {
 
@@ -32,6 +43,9 @@ class LoginViewModel : BaseViewModel() {
         loginItems.add(LoginItemsViewModel(this, Triple(R.drawable.group_153,"账号",0x00000001)))
         loginItems.add(LoginItemsViewModel(this,Triple(R.drawable.group_308,"密码",0x000000e1)))
         loginItems.add(LoginItemsViewModel(this,Triple(R.drawable.group_309,"房间号",0x00000001)))
+        loginItems[0].content.set("zsm");
+        loginItems[1].content.set("123456");
+        loginItems[2].content.set("1-1-2106");
 
 //        loginItems[0].apply {
 //            content.set(UserLoginHelper.username())
@@ -86,9 +100,9 @@ class LoginViewModel : BaseViewModel() {
     }
 
     fun login(success : ()->Unit = {}){
-//        val username =  loginItems[0].content.get() ?: return
-//        val password =  loginItems[1].content.get() ?: return
-//        val roomId =  loginItems[2].content.get() ?: return
+        val username =  loginItems[0].content.get() ?: return
+        val password =  loginItems[1].content.get() ?: return
+        val roomId =  loginItems[2].content.get() ?: return
 //
 //        if(checkedUsername.get() == true){
 //            UserLoginHelper.checkedUsername(true)
@@ -112,7 +126,30 @@ class LoginViewModel : BaseViewModel() {
 //            UserLoginHelper.checkedRoomId(false)
 //        }
 
-        success.invoke()
+        val jsonObject = JSONObject()
+        jsonObject.put("username", username)
+        jsonObject.put("password", password)
+        jsonObject.put("roomnumber", roomId)
+
+        OkHttpUtil.getInstance().doPost(API.login, jsonObject.toString(), object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                runOnUiThread {
+                    response.body?.let {
+                        val data = Gson().fromJson(it.string(), LoginEntity::class.java)
+                        if (data.code == 200){
+                            UserDataHelper.token(data.data.access_token)
+                            success.invoke()
+                        }else{
+                            toast(data.msg)
+                        }
+                    }
+                }
+            }
+        })
 
     }
 

@@ -1,10 +1,12 @@
 package com.yjkj.service_recoder.library.http
 
+import android.text.TextUtils
 import com.franmontiel.persistentcookiejar.ClearableCookieJar
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
 import com.yjkj.service_recoder.MyApplication
+import com.yjkj.service_recoder.java.data.UserDataHelper
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -85,9 +87,9 @@ class HeaderBuilder : Interceptor{
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request().newBuilder()
 
-//        if(!TextUtils.isEmpty(UserDataHelper.token())){
-//            request.addHeader("token", UserDataHelper.token())
-//        }
+        if(!TextUtils.isEmpty(UserDataHelper.token())){
+            request.addHeader("Authorization", "Bearer ${UserDataHelper.token()}")
+        }
         return chain.proceed(request.build())
     }
 

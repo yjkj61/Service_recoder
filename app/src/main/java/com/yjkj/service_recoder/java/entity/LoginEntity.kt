@@ -1,6 +1,12 @@
 package com.yjkj.service_recoder.java.entity
 
 data class LoginEntity(
-    var access_token : String = "",
-    var expires_in : String = ""
+    val code: Int,
+    val data: LoginData,
+    val msg: String
+)
+
+data class LoginData(
+    val access_token: String,
+    val expires_in: Int
 )
