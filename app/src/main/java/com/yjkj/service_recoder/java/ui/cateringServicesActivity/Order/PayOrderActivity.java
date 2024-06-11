@@ -69,7 +69,7 @@ public class PayOrderActivity extends BaseActivity<ActivityPayOrderBinding> {
     public void initView() {
         super.initView();
 
-        userBean = MyApplication.getInstance().getDb().userDao().getLoginStatusTrue(true);
+        userBean = MyApplication.getInstance().db.userDao().getLoginStatusTrue(true);
 
 
         viewBinding.selectAddress.setOnClickListener(v -> go(AddressMangerCatering.class, "select"));

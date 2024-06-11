@@ -59,4 +59,11 @@
         <item name="android:minWidth">12dip</item>
     </style>
 
+    <!--  下载视频进度条的样式  -->
+    <style name="ProgressBar_task" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">@dimen/dp_10</item>
+        <item name="android:minHeight">@dimen/dp_10</item>
+        <item name="android:indeterminateOnly">false</item>
+    </style>
+
 </resources>

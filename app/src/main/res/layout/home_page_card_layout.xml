@@ -54,7 +54,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:background="@mipmap/icon_main_service"
-                android:onClick="@{()->click.catering()}" />
+                android:onClick="@{()->click.wisdomService()}" />
 
             <ImageButton
                 android:id="@+id/wisdom_service_card"

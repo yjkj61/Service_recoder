@@ -18,6 +18,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.yjkj.service_recoder.MyApplication;
 import com.yjkj.service_recoder.java.bean.ADRow;
 import com.yjkj.service_recoder.java.bean.HomeAdBannerEntity;
 import com.yjkj.service_recoder.java.bean.HomeBannerEntity;
@@ -98,7 +99,7 @@ public class PropertyFiveBlessings extends BaseActivity<FragmentPropertyFiveBles
     @Override
     public void onResume() {
         super.onResume();
-        //initBanner();
+        initBanner();
         try {
             initMyBanner();
         } catch (JSONException e) {
@@ -141,8 +142,9 @@ public class PropertyFiveBlessings extends BaseActivity<FragmentPropertyFiveBles
                     }
 
 
-                    activity.runOnUiThread(() -> viewBinding.bannerPropertyFiveBlessings.addBannerLifecycleObserver(new MyLifecycleObserver())
+                    activity.runOnUiThread(() -> viewBinding.bannerPropertyFiveBlessings
                             .setAdapter(new BannerAdapter(bannerBeans))
+                            .addBannerLifecycleObserver(PropertyFiveBlessings.this)
                             .addOnPageChangeListener(new OnPageChangeListener() {
                                 @Override
                                 public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -306,7 +308,7 @@ public class PropertyFiveBlessings extends BaseActivity<FragmentPropertyFiveBles
                                     return null;
                                 }
                             });
-                            viewBinding.bannerHome.addBannerLifecycleObserver(new MyLifecycleObserver()).setAdapter(homeAdBannerAdapter);
+                            viewBinding.bannerHome.addBannerLifecycleObserver(PropertyFiveBlessings.this).setAdapter(homeAdBannerAdapter);
                         });
                     }
 
@@ -359,7 +361,7 @@ public class PropertyFiveBlessings extends BaseActivity<FragmentPropertyFiveBles
                                     return null;
                                 }
                             });
-                            viewBinding.bannerHome1.addBannerLifecycleObserver(new MyLifecycleObserver()).isAutoLoop(false).setAdapter(homeBannerAdapter);
+                            viewBinding.bannerHome1.addBannerLifecycleObserver(PropertyFiveBlessings.this).isAutoLoop(false).setAdapter(homeBannerAdapter);
                         });
                     }
                 }
@@ -391,7 +393,7 @@ public class PropertyFiveBlessings extends BaseActivity<FragmentPropertyFiveBles
                                     return null;
                                 }
                             });
-                            viewBinding.bannerHome2.addBannerLifecycleObserver(new MyLifecycleObserver()).isAutoLoop(false).setAdapter(homeBannerAdapter);
+                            viewBinding.bannerHome2.addBannerLifecycleObserver(PropertyFiveBlessings.this).isAutoLoop(false).setAdapter(homeBannerAdapter);
                         });
                     }
 

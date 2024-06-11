@@ -1,23 +1,15 @@
 package com.yjkj.service_recoder.ui.homepage
 
 import android.content.Intent
-import android.os.Bundle
-import android.view.ActionProvider.VisibilityListener
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import com.kunminx.architecture.ui.page.DataBindingConfig
 import com.yjkj.service_recoder.BR
-
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.java.ui.CateringServices
 import com.yjkj.service_recoder.java.ui.property.PropertyFiveBlessings
+import com.yjkj.service_recoder.java.utils.ToolUtils
 import com.yjkj.service_recoder.library.base.BaseFragment
 import com.yjkj.service_recoder.library.base.nav
-import com.yjkj.service_recoder.library.utils.ext.toast
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -38,6 +30,7 @@ class HomeFragment : BaseFragment() {
 
     override fun observer() {
         super.observer()
+        ToolUtils.initPermission(activity)
         //点击用户头像
         lifecycleScope.launch {
             viewModel.userAvatarClickFlow.collect{
@@ -56,19 +49,19 @@ class HomeFragment : BaseFragment() {
 
         //设置
         fun setting(){
-
+            ToolUtils.toSystemSetting(activity);
         }
         //升级
         fun update(){
-
+            ToolUtils.checkUpdate(activity, parentFragment)
         }
         //一键加速
         fun speedUp(){
-
+            ToolUtils.speedUp(activity)
         }
         //音量
         fun volume(){
-
+            ToolUtils.showSeekBarVolume(activity)
         }
 
         //立即打卡
@@ -106,6 +99,21 @@ class HomeFragment : BaseFragment() {
             nav().navigate(R.id.contactsFragment)
         }
 
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (ToolUtils.mRequestCode == requestCode) {
+            for (grantResult in grantResults) {
+                if (grantResult == -1) {
+                    break
+                }
+            }
+        }
     }
 
 }

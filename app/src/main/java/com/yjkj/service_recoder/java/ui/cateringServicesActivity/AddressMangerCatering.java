@@ -57,7 +57,7 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
     public void initData() {
         super.initData();
 
-        userBean = MyApplication.getInstance().getDb().userDao().getLoginStatusTrue(true);
+        userBean = MyApplication.getInstance().db.userDao().getLoginStatusTrue(true);
         controlType = getIntent().getStringExtra("msg");
 
         if(controlType.equals("select")){

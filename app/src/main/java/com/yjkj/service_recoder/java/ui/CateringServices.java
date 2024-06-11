@@ -141,7 +141,7 @@ public class CateringServices extends BaseActivity<FragmentCateringServicesBindi
     }
 
     private void initBanner(){
-        List<UserBean> allUser = MyApplication.getInstance().getDb().userDao().getAllUser();
+        List<UserBean> allUser = MyApplication.getInstance().db.userDao().getAllUser();
         Boolean isLogin = false;
         for (UserBean user:allUser) {
             if(user.isLoginStatus()){

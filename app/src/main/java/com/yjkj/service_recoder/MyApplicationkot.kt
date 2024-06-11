@@ -11,12 +11,12 @@ import com.tencent.mmkv.MMKV
 import com.yjkj.service_recoder.java.utils.AppDatabase
 
 
-class MyApplication : Application(), ViewModelStoreOwner {
+class MyApplicationkot : Application(), ViewModelStoreOwner {
     private lateinit var mAppViewModelStore: ViewModelStore
 
     var db: AppDatabase? = null
 
-    var instances: MyApplication? = null
+    var instances: MyApplicationkot? = null
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
@@ -25,16 +25,16 @@ class MyApplication : Application(), ViewModelStoreOwner {
     }
 
     companion object {
-        val instances: MyApplication? = null
+        val instances: MyApplicationkot? = null
         @SuppressLint("StaticFieldLeak")
         lateinit var context : Context
         @JvmStatic
-        fun getInstance(): MyApplication {
+        fun getInstance(): MyApplicationkot {
             if (instances == null) {
                 throw NullPointerException("please inherit BaseApplication or call setApplication.")
             }
 
-            return instances as MyApplication
+            return instances as MyApplicationkot
         }
     }
 

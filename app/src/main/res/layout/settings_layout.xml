@@ -84,17 +84,6 @@
                 android:drawableTop="@drawable/group_157"
                 android:text="设置"/>
             <TextView
-                android:onClick="@{()->click.speedUp()}"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:textSize="10dp"
-                android:textColor="@color/color_333333"
-                android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_157_1"
-                android:text="设置"/>
-            <TextView
                 android:onClick="@{()->click.update()}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -103,8 +92,19 @@
                 android:textSize="10dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
+                android:drawableTop="@drawable/group_157_1"
+                android:text="升级"/>
+            <TextView
+                android:onClick="@{()->click.speedUp()}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="10dp"
+                android:textColor="@color/color_333333"
+                android:gravity="center_horizontal"
                 android:drawableTop="@drawable/group_158"
-                android:text="设置"/>
+                android:text="加速"/>
             <TextView
                 android:onClick="@{()->click.volume()}"
                 android:layout_width="0dp"
@@ -115,7 +115,7 @@
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
                 android:drawableTop="@drawable/group_160"
-                android:text="设置"/>
+                android:text="音量"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

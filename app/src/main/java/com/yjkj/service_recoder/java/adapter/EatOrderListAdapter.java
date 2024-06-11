@@ -140,7 +140,7 @@ public class EatOrderListAdapter extends RecyclerView.Adapter<EatOrderListAdapte
 
     private void addDialog(String hint,Context context, EatOrderListBean.RowsDTO rowsDTO) {
 
-        UserBean userBean = MyApplication.getInstance().getDb().userDao().getLoginStatusTrue(true);
+        UserBean userBean = MyApplication.getInstance().db.userDao().getLoginStatusTrue(true);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.Dialog_style);
         View view = LayoutInflater.from(context).inflate(R.layout.add_dialog, null);

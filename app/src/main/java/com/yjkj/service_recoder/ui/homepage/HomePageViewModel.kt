@@ -6,6 +6,7 @@ import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.RecyclerView
 import com.yjkj.service_recoder.BR
 import com.yjkj.service_recoder.R
+import com.yjkj.service_recoder.java.utils.ToolUtils
 import com.yjkj.service_recoder.library.base.BaseViewModel
 import com.yjkj.service_recoder.ui.homepage.items.ContactsItemViewModel
 

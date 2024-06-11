@@ -116,7 +116,7 @@ public class OrderFragment extends BaseFragment<FragmentOrderBinding> {
 
         propertyOrderBeans.clear();
 
-        UserBean userBean = MyApplication.getInstance().getDb().userDao().getLoginStatusTrue(true);
+        UserBean userBean = MyApplication.getInstance().db.userDao().getLoginStatusTrue(true);
 
         if (userBean == null) return;
 

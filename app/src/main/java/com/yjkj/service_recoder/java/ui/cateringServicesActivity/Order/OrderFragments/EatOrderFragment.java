@@ -57,7 +57,7 @@ public class EatOrderFragment extends BaseFragment<FragmentEatOrderBinding> {
     public void initView() {
         super.initView();
 
-        userBean = MyApplication.getInstance().getDb().userDao().getLoginStatusTrue(true);
+        userBean = MyApplication.getInstance().db.userDao().getLoginStatusTrue(true);
     }
 
     @Override
