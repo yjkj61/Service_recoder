@@ -109,7 +109,7 @@ public class JudegeFragment extends BaseFragment<FragmentJudegeBinding> {
 
                 judegeBean.setComprehensiveScore(String.valueOf(Count.division(AllScore, 3)));
 
-                judegeBean.setCommentsImages(CareringServiceData.getInstance().getUserHeader());
+                judegeBean.setCommentsImages(CareringServiceData.getInstance(getActivity()).getUserHeader());
 
                 Log.d("TAG", "initView: "+new Gson().toJson(judegeBean));
 

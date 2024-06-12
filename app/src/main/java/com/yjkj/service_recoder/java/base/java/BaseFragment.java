@@ -88,9 +88,9 @@ public class BaseFragment<T extends ViewBinding> extends Fragment {
                     if (response.body() != null) {
                         JSONObject jsonObject2 = new JSONObject(response.body().string());
                         if (jsonObject2.getInt("code") == 200) {
-                            CareringServiceData.getInstance().setOwnerRemainMoney(jsonObject2.getJSONObject("data").getString("ownerRemainMoney"));
+                            CareringServiceData.getInstance(getActivity()).setOwnerRemainMoney(jsonObject2.getJSONObject("data").getString("ownerRemainMoney"));
                             Message message = new Message();
-                            message.obj = CareringServiceData.getInstance().getOwnerRemainMoney();
+                            message.obj = CareringServiceData.getInstance(getActivity()).getOwnerRemainMoney();
                             handler.sendMessage(message);
                         }
                     }

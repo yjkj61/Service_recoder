@@ -113,8 +113,8 @@ public class ShopOrderAdapter extends RecyclerView.Adapter<ShopOrderAdapter.View
                     Intent intent = new Intent(holder.itemView.getContext(), SubmitOrderView.class);
                     JudegeBean judegeBean = new JudegeBean();
                     judegeBean.setOrderId(sOrderPoListDTO.getSOrderId());
-                    judegeBean.setFirstCommentatorId(CareringServiceData.getInstance().getUserId());
-                    judegeBean.setFirstCommentatorName(CareringServiceData.getInstance().getUserName());
+                    judegeBean.setFirstCommentatorId(CareringServiceData.getInstance(v.getContext()).getUserId());
+                    judegeBean.setFirstCommentatorName(CareringServiceData.getInstance(v.getContext()).getUserName());
                     judegeBean.setsGoodsBusinessId(sOrderPoListDTO.getSGoodsBusinessId());
                     judegeBean.setsGoodsId(sOrderPoListDTO.getSGoodsId());
                     intent.putExtra("judegeBean", judegeBean);

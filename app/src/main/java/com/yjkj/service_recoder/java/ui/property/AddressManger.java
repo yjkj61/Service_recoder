@@ -184,7 +184,7 @@ public class AddressManger extends BaseActivity<ActivityAddressMangerBinding> {
             }
 
             AddressListBean.RowsDTO rowsDTO = new AddressListBean.RowsDTO();
-            rowsDTO.setUserId(Integer.parseInt(CareringServiceData.getInstance().getUserId()));
+            rowsDTO.setUserId(Integer.parseInt(CareringServiceData.getInstance(AddressManger.this).getUserId()));
 
 
             rowsDTO.setContact(name.getText().toString());

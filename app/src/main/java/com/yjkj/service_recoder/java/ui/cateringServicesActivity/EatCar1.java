@@ -121,7 +121,7 @@ public class EatCar1 extends BaseActivity<ActivityEatCar1Binding> {
     public void onResume() {
         super.onResume();
 
-        viewBinding.canteenName.setText(CareringServiceData.getInstance().getrFoodCanteenName());
+        viewBinding.canteenName.setText(CareringServiceData.getInstance(EatCar1.this).getrFoodCanteenName());
         updateMoney(handler);
 
 //        try {
@@ -160,7 +160,7 @@ public class EatCar1 extends BaseActivity<ActivityEatCar1Binding> {
     private void getFoodList() throws JSONException {
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("rFoodCanteenId",CareringServiceData.getInstance().getrFoodCanteenId());
+        jsonObject.put("rFoodCanteenId",CareringServiceData.getInstance(EatCar1.this).getrFoodCanteenId());
         jsonObject.put("rFoodCommunityOrPrivate","0");
 
         OkHttpUtil.getInstance().doPost(API.foodList(),jsonObject.toString(), new Callback() {
@@ -267,7 +267,7 @@ public class EatCar1 extends BaseActivity<ActivityEatCar1Binding> {
     }
 
     public void getFoodListNew(){
-        OkHttpUtil.getInstance().doGet(API.newFoodList() + "rFoodCanteenId=" + CareringServiceData.getInstance().getrFoodCanteenId()
+        OkHttpUtil.getInstance().doGet(API.newFoodList() + "rFoodCanteenId=" + CareringServiceData.getInstance(EatCar1.this).getrFoodCanteenId()
                 + "&rFoodCommunityOrPrivate=" + type, new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {

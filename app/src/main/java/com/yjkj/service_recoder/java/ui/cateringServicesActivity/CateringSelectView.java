@@ -92,10 +92,10 @@ public class CateringSelectView extends BaseActivity<ActivityCateringSelectViewB
             holder.name.setText(rowsDTOS.get(position).getRFoodCanteenName());
 
             holder.name.setOnClickListener(v -> {
-                CareringServiceData.getInstance().setMarkName(rowsDTOS.get(position).getMarkerName());
-                CareringServiceData.getInstance().setMarkId(String.valueOf(rowsDTOS.get(position).getMarkerId()));
-                CareringServiceData.getInstance().setrFoodCanteenId(String.valueOf(rowsDTOS.get(position).getRFoodCanteenId()));
-                CareringServiceData.getInstance().setrFoodCanteenName(rowsDTOS.get(position).getRFoodCanteenName());
+                CareringServiceData.getInstance(CateringSelectView.this).setMarkName(rowsDTOS.get(position).getMarkerName());
+                CareringServiceData.getInstance(CateringSelectView.this).setMarkId(String.valueOf(rowsDTOS.get(position).getMarkerId()));
+                CareringServiceData.getInstance(CateringSelectView.this).setrFoodCanteenId(String.valueOf(rowsDTOS.get(position).getRFoodCanteenId()));
+                CareringServiceData.getInstance(CateringSelectView.this).setrFoodCanteenName(rowsDTOS.get(position).getRFoodCanteenName());
                 activity.finish();
             });
         }

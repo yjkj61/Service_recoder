@@ -80,7 +80,7 @@ public class CardServiceDetail extends BaseActivity<ActivityCardServiceDetailBin
         }
 
 
-        viewBinding.money.setText("余额" + CareringServiceData.getInstance().getOwnerRemainMoney());
+        viewBinding.money.setText("余额" + CareringServiceData.getInstance(CardServiceDetail.this).getOwnerRemainMoney());
 
 
         viewBinding.timeSelect.setOnClickListener(v -> {

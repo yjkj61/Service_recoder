@@ -103,7 +103,7 @@ public class PayOrderActivity extends BaseActivity<ActivityPayOrderBinding> {
 
             try {
                 JSONObject jsonObject = new JSONObject();
-                jsonObject.put("userid", CareringServiceData.getInstance().getUserId());
+                jsonObject.put("userid", CareringServiceData.getInstance(PayOrderActivity.this).getUserId());
                 jsonObject.put("ownerId", userBean.getOwnerId());
                 jsonObject.put("rFoodCanteenId", foodList.size() > 0 ? foodList.get(0).getrFoodCanteenId() : "");
                 jsonObject.put("rOrderAddressId", GetOrderForShop.getInstance().getAddressId());
@@ -121,8 +121,8 @@ public class PayOrderActivity extends BaseActivity<ActivityPayOrderBinding> {
 
                 jsonObject.put("orderInfoList", jsonArray);
 
-                jsonObject.put("markerId", CareringServiceData.getInstance().getMarkId());
-                jsonObject.put("markerName", CareringServiceData.getInstance().getMarkName());
+                jsonObject.put("markerId", CareringServiceData.getInstance(PayOrderActivity.this).getMarkId());
+                jsonObject.put("markerName", CareringServiceData.getInstance(PayOrderActivity.this).getMarkName());
 
                 OkHttpUtil.getInstance().doPost(API.placeOrder, jsonObject.toString(), new Callback() {
                     @Override
@@ -211,8 +211,8 @@ public class PayOrderActivity extends BaseActivity<ActivityPayOrderBinding> {
                     if (addressListBean.getRows().size() == 0) {
 
                         runOnUiThread(() -> {
-                            viewBinding.name.setText("联系人：" + CareringServiceData.getInstance().getUserName());
-                            viewBinding.phone.setText("联系方式：" + CareringServiceData.getInstance().getPhoneNumber());
+                            viewBinding.name.setText("联系人：" + CareringServiceData.getInstance(PayOrderActivity.this).getUserName());
+                            viewBinding.phone.setText("联系方式：" + CareringServiceData.getInstance(PayOrderActivity.this).getPhoneNumber());
                             viewBinding.address.setText("请点击箭头选择地址");
                         });
 

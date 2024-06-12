@@ -4,17 +4,18 @@ import android.view.View
 import androidx.databinding.ObservableField
 import androidx.lifecycle.viewModelScope
 import com.yjkj.service_recoder.R
+import com.yjkj.service_recoder.java.bean.RoomListData
 import com.yjkj.service_recoder.ui.homepage.HomePageViewModel
 import kotlinx.coroutines.launch
 
-class ContactsItemViewModel(val viewModel: HomePageViewModel,val callState : Int) {
+class ContactsItemViewModel(val viewModel: HomePageViewModel,val data : RoomListData) {
 
     val stateColor = ObservableField(R.color.color_4580FF)
     val sosStateVisibility = ObservableField<Int>()
     val callingStateVisibility = ObservableField<Int>()
 
-    val userName = ObservableField("姓名")
-    val bedNumber = ObservableField("001")
+    val userName = ObservableField(data.ownerUsername)
+    val bedNumber = ObservableField(data.ownerRoomNum)
 
     val userAvatarImg = ObservableField(R.mipmap.ic_launcher)
 
@@ -23,20 +24,20 @@ class ContactsItemViewModel(val viewModel: HomePageViewModel,val callState : Int
     }
 
     fun setState(){
-        when(callState){
-            SOS_STATE ->{
-                //sos
-                sosStateVisibility.set(View.VISIBLE)
-                callingStateVisibility.set(View.INVISIBLE)
-                stateColor.set(R.color.color_FFAF1C)
-            }
-            CALLING_STATE ->{
-                //呼叫中
-                sosStateVisibility.set(View.INVISIBLE)
-                callingStateVisibility.set(View.VISIBLE)
-                stateColor.set(R.color.color_4580FF)
-            }
-        }
+//        when(callState){
+//            SOS_STATE ->{
+//                //sos
+//                sosStateVisibility.set(View.VISIBLE)
+//                callingStateVisibility.set(View.INVISIBLE)
+//                stateColor.set(R.color.color_FFAF1C)
+//            }
+//            CALLING_STATE ->{
+//                //呼叫中
+//                sosStateVisibility.set(View.INVISIBLE)
+//                callingStateVisibility.set(View.VISIBLE)
+//                stateColor.set(R.color.color_4580FF)
+//            }
+//        }
     }
 
     /**

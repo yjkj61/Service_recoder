@@ -77,7 +77,7 @@ public class EatCar2 extends BaseActivity<ActivityEatCar2Binding> {
     @Override
     public void onResume() {
         super.onResume();
-        viewBinding.canteenName.setText(CareringServiceData.getInstance().getrFoodCanteenName());
+        viewBinding.canteenName.setText(CareringServiceData.getInstance(EatCar2.this).getrFoodCanteenName());
         updateMoney(handler);
 
         getNewMenuList();
@@ -179,7 +179,7 @@ public class EatCar2 extends BaseActivity<ActivityEatCar2Binding> {
 
     private void getNewMenuList(){
         types.clear();
-        OkHttpUtil.getInstance().doGet(API.newFoodList() + "rFoodCanteenId=" + CareringServiceData.getInstance().getrFoodCanteenId()
+        OkHttpUtil.getInstance().doGet(API.newFoodList() + "rFoodCanteenId=" + CareringServiceData.getInstance(EatCar2.this).getrFoodCanteenId()
                 + "&rFoodCommunityOrPrivate=" + type, new Callback() {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {

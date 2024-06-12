@@ -1,5 +1,7 @@
 package com.yjkj.service_recoder.java.bean;
 
+import android.content.Context;
+
 public class CareringServiceData {
 
     private static CareringServiceData instance;
@@ -23,11 +25,18 @@ public class CareringServiceData {
     private String markName = "";
     private String rFoodCanteenId = "";
 
+    public static Context mcontext = null;
+
     private String rFoodCanteenName = "";
 
-    public static CareringServiceData getInstance() {
+    // 私有构造
+    private CareringServiceData(Context context) {
+        mcontext = context;
+    }
+
+    public static CareringServiceData getInstance(Context context) {
         if (instance == null) {
-            throw new NullPointerException("please inherit BaseApplication or call setApplication.");
+            instance = new CareringServiceData(context);
         }
 
         return instance;

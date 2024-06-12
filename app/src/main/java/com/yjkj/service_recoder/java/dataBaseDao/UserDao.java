@@ -28,7 +28,7 @@ public interface UserDao {
     List<UserBean> getAllUser();
 
     @Query("SELECT * FROM UserBean where userId = :userId")
-    UserBean getUserById(int userId);
+    UserBean getUserById(Long userId);
 
     @Update
     void updateUser(UserBean userBean);

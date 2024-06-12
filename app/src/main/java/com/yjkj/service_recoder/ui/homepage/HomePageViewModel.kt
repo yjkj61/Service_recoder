@@ -1,17 +1,29 @@
 package com.yjkj.service_recoder.ui.homepage
 
+import android.util.Log
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableField
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 import com.yjkj.service_recoder.BR
 import com.yjkj.service_recoder.R
+import com.yjkj.service_recoder.java.bean.RoomListEntity
+import com.yjkj.service_recoder.java.data.UserDataHelper
+import com.yjkj.service_recoder.java.entity.LoginEntity
+import com.yjkj.service_recoder.java.http.OkHttpUtil
+import com.yjkj.service_recoder.java.http.medicalservice.API
 import com.yjkj.service_recoder.java.utils.ToolUtils
 import com.yjkj.service_recoder.library.base.BaseViewModel
+import com.yjkj.service_recoder.library.utils.ext.toast
 import com.yjkj.service_recoder.ui.homepage.items.ContactsItemViewModel
 
 import kotlinx.coroutines.flow.MutableSharedFlow
 import me.tatarka.bindingcollectionadapter2.ItemBinding
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.Response
+import java.io.IOException
 
 class HomePageViewModel : BaseViewModel() {
 
@@ -35,22 +47,13 @@ class HomePageViewModel : BaseViewModel() {
     val uvValue = ObservableField("低")
     val humValue = ObservableField("61%")
     val aopValue = ObservableField("0毫米")
+    val roomnumber = ObservableField(UserDataHelper.roomNumber())
 
     init {
-        initContactItems()
+        getRoomList()
         scrollBarLayout.get()?.let {
 
         }
-    }
-
-    fun initContactItems(){
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.SOS_STATE))
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.SOS_STATE))
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.CALLING_STATE))
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.CALLING_STATE))
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.CALLING_STATE))
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.CALLING_STATE))
-        contactsItems.add(ContactsItemViewModel(this,ContactsItemViewModel.CALLING_STATE))
     }
 
     val recyclerViewScrollChangeListener = object : RecyclerView.OnScrollListener() {
@@ -65,9 +68,30 @@ class HomePageViewModel : BaseViewModel() {
             scrollBarLayout.get()?.let {
                 it?.progress = progress
             }
-
-
-
         }
+    }
+
+    fun getRoomList(){
+        OkHttpUtil.getInstance().doGet(API.OwnerRoomsList + UserDataHelper.roomNumber(), object :
+            Callback {
+            override fun onFailure(call: Call, e: IOException) {
+
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                runOnUiThread {
+                    response.body?.let {
+                        val data = Gson().fromJson(it.string(), RoomListEntity::class.java)
+                        if (data.code == 200){
+                            data.data.forEach {
+                                contactsItems.add(ContactsItemViewModel(this@HomePageViewModel,it))
+                            }
+                        }else{
+                            toast(data.msg)
+                        }
+                    }
+                }
+            }
+        })
     }
 }

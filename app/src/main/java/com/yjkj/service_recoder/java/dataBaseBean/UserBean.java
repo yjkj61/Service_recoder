@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 public class UserBean {
 
     @PrimaryKey
-    private int userId;
+    private Long userId;
 
     @ColumnInfo (name = "ownerId")
     private String ownerId;
@@ -45,11 +45,11 @@ public class UserBean {
     @ColumnInfo(name = "password")
     private String password;
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

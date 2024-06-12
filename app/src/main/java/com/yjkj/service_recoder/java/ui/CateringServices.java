@@ -68,18 +68,18 @@ public class CateringServices extends BaseActivity<FragmentCateringServicesBindi
 
         viewBinding.btnLeft.setOnClickListener(v -> {
 
-            if (!CareringServiceData.getInstance().getMarkId().isEmpty()) {
+            if (!CareringServiceData.getInstance(CateringServices.this).getMarkId().isEmpty()) {
                 go(EatCar1.class, "0");
-            }else {
+            } else {
                 showToast("无食堂供应");
             }
 
 
         });
         viewBinding.btnRight.setOnClickListener(v -> {
-            if (!CareringServiceData.getInstance().getMarkId().isEmpty()) {
+            if (!CareringServiceData.getInstance(CateringServices.this).getMarkId().isEmpty()) {
                 go(EatCar2.class, "1");
-            }else {
+            } else {
                 showToast("无食堂供应");
             }
 
@@ -111,19 +111,19 @@ public class CateringServices extends BaseActivity<FragmentCateringServicesBindi
                 if (response.body() != null) {
                     CanteenBean canteenBean = new Gson().fromJson(response.body().string(), CanteenBean.class);
 
-                    if(canteenBean.getCode() == 200){
+                    if (canteenBean.getCode() == 200) {
                         if (canteenBean.getRows().size() > 0) {
                             activity.runOnUiThread(() -> viewBinding.canteenName.setText(canteenBean.getRows().get(0).getRFoodCanteenName()));
 
 
-                            CareringServiceData.getInstance().setMarkId(String.valueOf(canteenBean.getRows().get(0).getMarkerId()));
-                            CareringServiceData.getInstance().setMarkName(canteenBean.getRows().get(0).getMarkerName());
-                            CareringServiceData.getInstance().setrFoodCanteenId(String.valueOf(canteenBean.getRows().get(0).getRFoodCanteenId()));
-                            CareringServiceData.getInstance().setrFoodCanteenName(canteenBean.getRows().get(0).getRFoodCanteenName());
+                            CareringServiceData.getInstance(CateringServices.this).setMarkId(String.valueOf(canteenBean.getRows().get(0).getMarkerId()));
+                            CareringServiceData.getInstance(CateringServices.this).setMarkName(canteenBean.getRows().get(0).getMarkerName());
+                            CareringServiceData.getInstance(CateringServices.this).setrFoodCanteenId(String.valueOf(canteenBean.getRows().get(0).getRFoodCanteenId()));
+                            CareringServiceData.getInstance(CateringServices.this).setrFoodCanteenName(canteenBean.getRows().get(0).getRFoodCanteenName());
                         } else {
                             activity.runOnUiThread(() -> viewBinding.canteenName.setText("暂无食堂供应"));
                         }
-                    }else {
+                    } else {
                         activity.runOnUiThread(() -> viewBinding.canteenName.setText("暂无食堂供应"));
                     }
 
@@ -140,16 +140,16 @@ public class CateringServices extends BaseActivity<FragmentCateringServicesBindi
 
     }
 
-    private void initBanner(){
+    private void initBanner() {
         List<UserBean> allUser = MyApplication.getInstance().db.userDao().getAllUser();
         Boolean isLogin = false;
-        for (UserBean user:allUser) {
-            if(user.isLoginStatus()){
+        for (UserBean user : allUser) {
+            if (user.isLoginStatus()) {
                 isLogin = true;
                 break;
             }
         }
-        if(allUser.size() == 0 || !isLogin){
+        if (allUser.size() == 0 || !isLogin) {
             //用户未登录，加载默认轮播图
             viewBinding.defaultBannerImage.setVisibility(View.VISIBLE);
             viewBinding.realBanner.setVisibility(View.GONE);
@@ -166,10 +166,10 @@ public class CateringServices extends BaseActivity<FragmentCateringServicesBindi
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 ResponseBody body = response.body();
-                if(body != null){
+                if (body != null) {
                     CateringBannerEntity bannerEntity = new Gson().fromJson(body.string(), CateringBannerEntity.class);
                     List<CaterRow> rows = bannerEntity.component3();
-                    if(rows.isEmpty()){
+                    if (rows.isEmpty()) {
                         return;
                     }
                     String[] split = rows.get(0).getImage().split(",");
@@ -179,7 +179,7 @@ public class CateringServices extends BaseActivity<FragmentCateringServicesBindi
                             viewBinding.realBanner.isAutoLoop(true).setAdapter(new BannerImageAdapter<String>(Arrays.asList(split)) {
                                 @Override
                                 public void onBindView(BannerImageHolder holder, String data, int position, int size) {
-                                    GlideUtils.load(CateringServices.this,data,holder.imageView);
+                                    GlideUtils.load(CateringServices.this, data, holder.imageView);
                                 }
                             });
                         }

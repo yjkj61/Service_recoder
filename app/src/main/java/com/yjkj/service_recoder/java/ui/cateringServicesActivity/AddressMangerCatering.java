@@ -166,7 +166,7 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
             }
 
             AddressCatering.RowsDTO rowsDTO = new AddressCatering.RowsDTO();
-            rowsDTO.setUserId(Integer.parseInt(CareringServiceData.getInstance().getUserId()));
+            rowsDTO.setUserId(Integer.parseInt(CareringServiceData.getInstance(AddressMangerCatering.this).getUserId()));
             rowsDTO.setOwnerId(userBean.getOwnerId());
             rowsDTO.setRFoodRecipientName(name.getText().toString());
             rowsDTO.setRFoodLocation(area.getText().toString());

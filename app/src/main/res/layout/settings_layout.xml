@@ -78,10 +78,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_157"
+                android:drawableTop="@mipmap/icon_main_setting"
                 android:text="设置"/>
             <TextView
                 android:onClick="@{()->click.update()}"
@@ -89,10 +89,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_157_1"
+                android:drawableTop="@mipmap/icon_main_update"
                 android:text="升级"/>
             <TextView
                 android:onClick="@{()->click.speedUp()}"
@@ -100,10 +100,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_158"
+                android:drawableTop="@mipmap/icon_main_jiasu"
                 android:text="加速"/>
             <TextView
                 android:onClick="@{()->click.volume()}"
@@ -111,10 +111,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_160"
+                android:drawableTop="@mipmap/icon_main_vol"
                 android:text="音量"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>

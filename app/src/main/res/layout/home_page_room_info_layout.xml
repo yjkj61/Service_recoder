@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -74,9 +75,10 @@
                 android:layout_marginStart="24dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="24sp"/>
+                android:textSize="24sp"
+                android:visibility="gone"/>
             <TextView
-                android:text="706"
+                android:text="@{viewModel.roomnumber}"
                 android:id="@+id/room_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

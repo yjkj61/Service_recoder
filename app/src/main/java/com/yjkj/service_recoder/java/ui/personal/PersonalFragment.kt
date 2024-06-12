@@ -2,7 +2,6 @@ package com.yjkj.service_recoder.java.ui.personal
 
 import android.content.Intent
 import android.net.Uri
-import android.webkit.WebView
 import androidx.lifecycle.lifecycleScope
 import com.kunminx.architecture.ui.page.DataBindingConfig
 import com.yjkj.service_recoder.java.entity.OwnerEntity
@@ -22,6 +21,7 @@ import com.yjkj.service_recoder.java.ui.HardSoftDeviceActivity
 import com.yjkj.service_recoder.java.ui.HealthCardActivity
 import com.yjkj.service_recoder.java.ui.HlListActivity
 import com.yjkj.service_recoder.java.ui.UserInfoActivity
+import com.yjkj.service_recoder.java.ui.WebView
 
 class PersonalFragment : BaseActivity() {
     private lateinit var viewModel: PersonalViewModel

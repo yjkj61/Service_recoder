@@ -188,11 +188,10 @@ public class OrderFragment extends BaseFragment<FragmentOrderBinding> {
 
                         if (response.body() != null) {
                             Code200 code200 = new Gson().fromJson(response.body().string(), Code200.class);
-
                             if (code200.getCode() == 200) {
-
                                 try {
                                     getOrderList();
+                                    alertDialog.dismiss();
                                 } catch (JSONException e) {
                                     throw new RuntimeException(e);
                                 }
@@ -203,8 +202,6 @@ public class OrderFragment extends BaseFragment<FragmentOrderBinding> {
         );
 
         right_btn.setOnClickListener(v1 -> alertDialog.dismiss());
-
-
     }
 
     public class PropertyOrderBean {

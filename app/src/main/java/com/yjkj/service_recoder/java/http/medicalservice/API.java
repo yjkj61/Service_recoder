@@ -380,7 +380,8 @@ public class API {
     public static String addOwnerInfo =ownerHost + "/owner/addOwnerInfo";
     public static String editOwnerInfo =ownerHost + "/owner/editOwnerInfo";
 
-
+    //房间列表
+    public static String OwnerRoomsList =ownerHost + "/owner/listByRoomNumber/";
 
 }
 

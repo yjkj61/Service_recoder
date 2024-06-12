@@ -10,6 +10,7 @@ import androidx.multidex.MultiDex;
 import androidx.room.Room;
 
 import com.tencent.mmkv.MMKV;
+import com.yjkj.service_recoder.java.entity.OwnerEntity;
 import com.yjkj.service_recoder.java.utils.AppDatabase;
 
 /**
@@ -26,6 +27,8 @@ public class MyApplication extends Application implements ViewModelStoreOwner {
     public ViewModelStore mAppViewModelStore = null;
 
     public static Context context = null;
+
+    public static OwnerEntity ownerEntity = null;
 
     @Override
     protected void attachBaseContext(Context base) {

@@ -584,7 +584,7 @@ class UserInfoActivity : BaseActivity<ActivityUserInfoBinding>() {
             R.layout.spinner_dropdown_item,
             userPortraits
         )
-        val i = data.ownerRole?.ifNull { "0" }?.toInt()
+//        val i = data.ownerRole?.ifNull { "0" }?.toInt()
         currentPortraits = data.ownerRole?.ifNull { "" }.toString()
         viewBinding.include1.userPortraitSpinner.apply {
             adapter = userPortraitsAdapter
@@ -603,46 +603,46 @@ class UserInfoActivity : BaseActivity<ActivityUserInfoBinding>() {
                 }
 
             }
-            setSelection(i!!)
+//            setSelection(i!!)
         }
 
-        val role = when (data.ownerRole.ifNull { "" }) {
-            "00" -> {
-                "普通职工"
-            }
-
-            "01" -> {
-                "政府领导"
-            }
-
-            "02" -> {
-                "事业单位"
-            }
-
-            "03" -> {
-                "公务员"
-            }
-
-            "04" -> {
-                "企业家"
-            }
-
-            "05" -> {
-                "退休职工"
-            }
-
-            "06" -> {
-                "退役军官"
-            }
-
-            "07" -> {
-                "低保老人"
-            }
-
-            else -> {
-                "其他"
-            }
-        }
+//        val role = when (data.ownerRole.ifNull { "" }) {
+//            "00" -> {
+//                "普通职工"
+//            }
+//
+//            "01" -> {
+//                "政府领导"
+//            }
+//
+//            "02" -> {
+//                "事业单位"
+//            }
+//
+//            "03" -> {
+//                "公务员"
+//            }
+//
+//            "04" -> {
+//                "企业家"
+//            }
+//
+//            "05" -> {
+//                "退休职工"
+//            }
+//
+//            "06" -> {
+//                "退役军官"
+//            }
+//
+//            "07" -> {
+//                "低保老人"
+//            }
+//
+//            else -> {
+//                "其他"
+//            }
+//        }
 //        val list = mutableListOf(role)
 //        val myAdapter =  UserHabitAdapter()
 //        myAdapter.setData(list)
