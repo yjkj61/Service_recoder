@@ -189,6 +189,7 @@ public class EatCar2 extends BaseActivity<ActivityEatCar2Binding> {
 
 
                 if (foodListBean.getCode() == 200) {
+                    menuSlideBeans.clear();
                     types.add("当季新品");
                     for (FoodListNewBean.DataDTO row : foodListBean.getData()) {
                         if (!types.contains(row.getRFoodType())) types.add(row.getRFoodType());

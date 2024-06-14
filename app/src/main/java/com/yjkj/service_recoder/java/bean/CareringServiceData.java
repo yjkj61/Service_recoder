@@ -1,5 +1,6 @@
 package com.yjkj.service_recoder.java.bean;
 
+import android.app.Activity;
 import android.content.Context;
 
 public class CareringServiceData {

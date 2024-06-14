@@ -1,6 +1,9 @@
 package com.yjkj.service_recoder.java.ui.cateringServicesActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,19 +18,27 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
+import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
+import com.bigkoo.pickerview.view.OptionsPickerView;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.yjkj.service_recoder.MyApplication;
 import com.yjkj.service_recoder.R;
 import com.yjkj.service_recoder.databinding.ActivityAddressMangerBinding;
 import com.yjkj.service_recoder.java.base.BaseActivity;
 import com.yjkj.service_recoder.java.bean.AddressCatering;
 import com.yjkj.service_recoder.java.bean.CareringServiceData;
+import com.yjkj.service_recoder.java.bean.ProviceBean;
 import com.yjkj.service_recoder.java.dataBaseBean.UserBean;
 import com.yjkj.service_recoder.java.http.OkHttpUtil;
 import com.yjkj.service_recoder.java.http.medicalservice.API;
+import com.yjkj.service_recoder.java.ui.property.AddressManger;
 import com.yjkj.service_recoder.java.utils.GetOrderForShop;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,6 +56,11 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
     private String controlType;
 
     private UserBean userBean;
+
+    //省、市、区-列表
+    private List<String> options1Items = new ArrayList<>();
+    private List<List<String>> options2Items = new ArrayList<>();
+    private List<List<List<String>>> options3Items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +93,7 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
 
         });
 
+        initJsonData();
         getAddressList();
     }
 
@@ -155,6 +172,13 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
             alertDialog.dismiss();
         });
 
+        area.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                areaPicker(area);
+            }
+        });
+
         right_btn.setOnClickListener(v1 -> {
             if (name.getText().toString().isEmpty() ||
                     phone.getText().toString().isEmpty() ||
@@ -166,7 +190,7 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
             }
 
             AddressCatering.RowsDTO rowsDTO = new AddressCatering.RowsDTO();
-            rowsDTO.setUserId(Integer.parseInt(CareringServiceData.getInstance(AddressMangerCatering.this).getUserId()));
+            rowsDTO.setUserId(Long.parseLong(CareringServiceData.getInstance(AddressMangerCatering.this).getUserId()));
             rowsDTO.setOwnerId(userBean.getOwnerId());
             rowsDTO.setRFoodRecipientName(name.getText().toString());
             rowsDTO.setRFoodLocation(area.getText().toString());
@@ -206,6 +230,76 @@ public class AddressMangerCatering extends BaseActivity<ActivityAddressMangerBin
             });
         });
 
+
+    }
+
+    /**
+     *  PickerView用法
+     */
+    private void areaPicker(TextView address) {
+        OptionsPickerView pvOptions = new OptionsPickerBuilder(this, new OnOptionsSelectListener() {
+            @Override
+            public void onOptionsSelect(int options1, int options2, int options3, View v) {
+                String str = options1Items.get(options1) +
+                        options2Items.get(options1).get(options2) +
+                        options3Items.get(options1).get(options2).get(options3);
+                address.setText(str);
+//                ToastUtils.show(str);
+            }
+        })
+                .setTitleText("城市选择")
+                .setDividerColor(Color.BLACK)
+                .setTextColorCenter(Color.BLACK)
+                .setContentTextSize(20)
+                .setOutSideCancelable(false)
+                .isDialog(true)
+                .build();
+        pvOptions.setPicker(options1Items, options2Items, options3Items);
+        pvOptions.show();
+    }
+
+    /**
+     *  解析数据
+     */
+    private void initJsonData() {
+        String str = new GetJsonDataUtil().getJson(this, "province.json");
+        List<ProviceBean> list = new Gson().fromJson(str, new TypeToken<List<ProviceBean>>() {
+        }.getType());
+        for (ProviceBean bean : list) {
+            options1Items.add(bean.getName());
+            List<String> city = new ArrayList<>();
+            List<List<String>> area = new ArrayList<>();
+            for (ProviceBean.CityBean cityBean : bean.getCity()) {
+                city.add(cityBean.getName());
+                area.add(cityBean.getArea());
+            }
+            options2Items.add(city);
+            options3Items.add(area);
+        }
+    }
+
+    /**
+     * @data on 2020/11/2 3:32 PM
+     * @auther armStrong
+     * @describe 读取Assent资源文件中的并将.json文件转换成String类型
+     */
+    public class GetJsonDataUtil {
+        public String getJson(Context context, String fileName) {
+
+            StringBuilder stringBuilder = new StringBuilder();
+            try {
+                AssetManager assetManager = context.getAssets();
+                BufferedReader bf = new BufferedReader(new InputStreamReader(
+                        assetManager.open(fileName)));
+                String line;
+                while ((line = bf.readLine()) != null) {
+                    stringBuilder.append(line);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return stringBuilder.toString();
+        }
 
     }
 

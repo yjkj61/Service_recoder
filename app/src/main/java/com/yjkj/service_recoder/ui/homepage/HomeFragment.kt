@@ -7,9 +7,9 @@ import com.kunminx.architecture.ui.page.DataBindingConfig
 import com.yjkj.service_recoder.BR
 import com.yjkj.service_recoder.MyApplication
 import com.yjkj.service_recoder.R
+import com.yjkj.service_recoder.java.bean.CareringServiceData
 import com.yjkj.service_recoder.java.dataBaseBean.UserBean
 import com.yjkj.service_recoder.java.ui.CateringServices
-import com.yjkj.service_recoder.java.ui.UserInfoActivity
 import com.yjkj.service_recoder.java.ui.personal.PersonalFragment
 import com.yjkj.service_recoder.java.ui.property.PropertyFiveBlessings
 import com.yjkj.service_recoder.java.utils.ToolUtils
@@ -57,6 +57,11 @@ class HomeFragment : BaseFragment() {
 //                nav().navigate(R.id.userSecondaryFragment)
             }
         }
+
+        CareringServiceData.getInstance(activity).setUserName(MyApplication.ownerEntity.ownerName)
+        CareringServiceData.getInstance(activity).setUserHeader(MyApplication.ownerEntity.ownerPic)
+        CareringServiceData.getInstance(activity).setUserId(MyApplication.ownerEntity.userId.toString())
+        CareringServiceData.getInstance(activity).setPhoneNumber(MyApplication.ownerEntity.ownerPhone)
     }
 
     inner class Click {
