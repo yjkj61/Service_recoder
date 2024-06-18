@@ -81,4 +81,7 @@ public class API {
     //健康监测
     public static String Health_Card = BASE_URL_9213 + "oxygen/lastPhysicalExamination/";
 
+    //其他房间
+    public static String Other_Room = BASE_URL + "owner/roomNumberList";
+
 }

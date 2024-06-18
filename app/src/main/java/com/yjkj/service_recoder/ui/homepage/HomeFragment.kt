@@ -11,6 +11,7 @@ import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.java.bean.CareringServiceData
 import com.yjkj.service_recoder.java.dataBaseBean.UserBean
 import com.yjkj.service_recoder.java.ui.CateringServices
+import com.yjkj.service_recoder.java.ui.OtherRoomsListActivity
 import com.yjkj.service_recoder.java.ui.personal.PersonalFragment
 import com.yjkj.service_recoder.java.ui.property.PropertyFiveBlessings
 import com.yjkj.service_recoder.java.utils.ToolUtils
@@ -125,6 +126,11 @@ class HomeFragment : BaseFragment() {
             var intent = Intent(Intent.ACTION_PICK)
             intent.setType(ContactsContract.Contacts.CONTENT_TYPE)
             startActivity(intent);
+        }
+
+        fun otherRoom(){
+            var intent = Intent(activity, OtherRoomsListActivity::class.java)
+            startActivity(intent)
         }
 
     }

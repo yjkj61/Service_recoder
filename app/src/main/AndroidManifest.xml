@@ -129,6 +129,9 @@
         <activity
             android:name=".java.ui.property.PropertyFiveBlessings"
             android:exported="false" />
+        <activity
+            android:name=".java.ui.OtherRoomsListActivity"
+            android:exported="false" />
 
     </application>
 
