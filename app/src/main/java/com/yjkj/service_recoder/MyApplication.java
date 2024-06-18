@@ -12,6 +12,7 @@ import androidx.room.Room;
 import com.tencent.mmkv.MMKV;
 import com.yjkj.service_recoder.java.entity.OwnerEntity;
 import com.yjkj.service_recoder.java.utils.AppDatabase;
+import com.yjkj.service_recoder.java.utils.CrashHandler;
 
 /**
  * @description
@@ -56,6 +57,8 @@ public class MyApplication extends Application implements ViewModelStoreOwner {
                 .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build();
+
+        CrashHandler.getInstance().init(getApplicationContext());
     }
 
     @NonNull

@@ -88,16 +88,9 @@ class HomePageViewModel : BaseViewModel() {
         }
     }
 
-    val task = object : TimerTask() {
-        override fun run() {
-            currentTime.set(datFragment.format(Date()))
-        }
-
-    }
-
     fun ShowLocalTime(){
         timer.schedule(0L, 1000L){
-            task.run()
+            currentTime.set(datFragment.format(Date()))
         }
     }
 

@@ -2,6 +2,7 @@ package com.yjkj.service_recoder.ui.homepage
 
 import android.content.Intent
 import android.net.Uri
+import android.provider.ContactsContract
 import androidx.lifecycle.lifecycleScope
 import com.kunminx.architecture.ui.page.DataBindingConfig
 import com.yjkj.service_recoder.BR
@@ -121,8 +122,8 @@ class HomeFragment : BaseFragment() {
         //联系人列表
         fun addressList() {
 //            nav().navigate(R.id.contactsFragment)
-            var uri = Uri.parse("content://Contacts/people")
-            var intent = Intent(Intent.ACTION_PICK, uri)
+            var intent = Intent(Intent.ACTION_PICK)
+            intent.setType(ContactsContract.Contacts.CONTENT_TYPE)
             startActivity(intent);
         }
 
