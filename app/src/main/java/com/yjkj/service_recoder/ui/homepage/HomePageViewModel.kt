@@ -144,12 +144,14 @@ class HomePageViewModel : BaseViewModel() {
                             }
                             currentWeek.set("  周" + weekdays[w])
 //                            lunarCalendar.set(LunarCalendar)
-                            temperature.set(data.data.lives.get(0).temperature + "℃")
-                            weatherState.set(data.data.lives.get(0).weather)
-                            city.set(data.data.lives.get(0).province + " " + data.data.lives.get(0).city)
-                            uvValue.set(data.data.lives.get(0).winddirection)
-                            humValue.set(data.data.lives.get(0).windpower)
-                            aopValue.set(data.data.lives.get(0).humidity + "%")
+                            if (data.data.lives != null && data.data.lives.size != 0){
+                                temperature.set(data.data.lives.get(0).temperature + "℃")
+                                weatherState.set(data.data.lives.get(0).weather)
+                                city.set(data.data.lives.get(0).province + " " + data.data.lives.get(0).city)
+                                uvValue.set(data.data.lives.get(0).winddirection)
+                                humValue.set(data.data.lives.get(0).windpower)
+                                aopValue.set(data.data.lives.get(0).humidity + "%")
+                            }
                         }else{
                             toast(data.msg)
                         }
