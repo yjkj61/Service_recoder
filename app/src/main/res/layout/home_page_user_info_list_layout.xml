@@ -14,14 +14,10 @@
 
     <androidx.constraintlayout.motion.widget.MotionLayout
         motionLayoutInstance="@={viewModel.scrollBarLayout}"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         android:background="@drawable/white_bg_10_dp_corner_bg_shape"
-        app:layout_constraintTop_toBottomOf="@id/room_info_layout"
-        app:layout_constraintStart_toStartOf="@id/room_info_layout"
-        app:layout_constraintEnd_toEndOf="@id/room_info_layout"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layoutDescription="@xml/fragment_home_contacts_rv_scene">
 
         <androidx.recyclerview.widget.RecyclerView

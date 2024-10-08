@@ -1,4 +1,4 @@
-package com.yjkj.property_management.java.utils
+package com.yjkj.service_recoder.java.utils
 
 import android.content.Context
 import android.view.View
@@ -8,8 +8,8 @@ import android.widget.Spinner
 import android.widget.TextView
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
-import com.yjkj.property_management.Application
-import com.yjkj.property_management.R
+import com.yjkj.service_recoder.MyApplication
+import com.yjkj.service_recoder.R
 
 /**
  * 弹出确认对话框
@@ -37,7 +37,7 @@ fun Context.confirmDialog(cancelStr : String = "取消",confirmStr : String = "�
             confirmBlock.invoke(currentSelected)
             dismiss()
         }
-        var adapter = ArrayAdapter(Application.context,R.layout.spinner_dropdown_item,data)
+        var adapter = ArrayAdapter(MyApplication.context,R.layout.spinner_dropdown_item,data)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(

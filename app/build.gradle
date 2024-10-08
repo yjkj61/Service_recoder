@@ -83,6 +83,12 @@ dependencies {
     api(ThirdParty.glide.transformations)
     implementation project(path: ':wheelview')
     implementation project(path: ':pickerview')
+    def room_version = "2.4.0"
+
+    implementation 'androidx.room:room-common:2.4.0'
+    implementation 'androidx.room:room-runtime:2.4.0'
+    kapt 'androidx.room:room-compiler:2.4.0'
+    implementation "androidx.room:room-rxjava3:$room_version"
 
     kapt(ThirdParty.glide.kapt)
     api(ThirdParty.rxlifecycle.rxlifecycle)
@@ -129,4 +135,16 @@ dependencies {
     implementation 'io.github.h07000223:flycoTabLayout:3.0.0'
     //图表
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'com.github.crazyandcoder:citypicker:6.0.2'
+    api("com.squareup.retrofit2:adapter-rxjava2:2.3.0")
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+    implementation "io.reactivex.rxjava3:rxjava:3.0.0"
+    implementation 'com.github.weidongjian:androidWheelView:1.0.0'
+    implementation 'com.amap.api:3dmap:5.1.0'
+    implementation 'com.amap.api:location:3.3.0'
+    implementation 'com.amap.api:search:5.0.0'
+    implementation "me.laoyuyu.aria:core:3.8.16"
+    kapt "me.laoyuyu.aria:compiler:3.8.16"
+
 }

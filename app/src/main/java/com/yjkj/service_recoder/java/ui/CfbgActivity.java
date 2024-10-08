@@ -102,6 +102,13 @@ public class CfbgActivity extends BaseActivity<ActivityCfbgBinding> {
                 addCfbg();
             }
         });
+
+        viewBinding.igBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     public void setQuestionData(CfbgBean bean){
@@ -178,10 +185,6 @@ public class CfbgActivity extends BaseActivity<ActivityCfbgBinding> {
         }
     }
 
-    public void back(){
-        finish();
-    }
-
     public int pageNum = 1;
 
     public int pageSize = 100;
@@ -238,7 +241,7 @@ public class CfbgActivity extends BaseActivity<ActivityCfbgBinding> {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            showToast("新增成功");
+                            showToast("提交成功");
                             finish();
                         }
                     });

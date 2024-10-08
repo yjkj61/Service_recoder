@@ -24,7 +24,7 @@ public class HlListBean {
     @SerializedName("bookNum")
     private String bookNum;
     @SerializedName("ownerUserId")
-    private Integer ownerUserId;
+    private Long ownerUserId;
     @SerializedName("ownerId")
     private Integer ownerId;
     @SerializedName("ownerName")
@@ -166,11 +166,11 @@ public class HlListBean {
         this.bookNum = bookNum;
     }
 
-    public Integer getOwnerUserId() {
+    public Long getOwnerUserId() {
         return ownerUserId;
     }
 
-    public void setOwnerUserId(Integer ownerUserId) {
+    public void setOwnerUserId(Long ownerUserId) {
         this.ownerUserId = ownerUserId;
     }
 

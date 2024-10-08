@@ -5,7 +5,6 @@ import androidx.databinding.ObservableField
 import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.yjkj.service_recoder.Application
 import com.yjkj.service_recoder.BR
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.library.base.BaseViewModel

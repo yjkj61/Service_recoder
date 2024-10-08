@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yjkj.service_recoder.ui.usersecondary.items.CallLogItemViewModel" />
+            type="com.yjkj.service_recoder.java.ui.personal.item.CallLogItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -40,7 +40,8 @@
             <TextView
                 android:onClick="@{()->viewModel.agree()}"
                 android:id="@+id/agree_button"
-                android:text="接受"
+                android:text="@={viewModel.btnagree}"
+                android:visibility="@{viewModel.btnagreevisiable}"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:textColor="@color/white"
@@ -66,7 +67,8 @@
             <TextView
                 android:onClick="@{()->viewModel.disagree()}"
                 android:id="@+id/disagree_button"
-                android:text="拒绝"
+                android:text="@={viewModel.btndisagree}"
+                android:visibility="@{viewModel.btndisagreevisiable}"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:textColor="@color/white"

@@ -1,14 +1,16 @@
-package com.yjkj.property_management.ui.page.personal
+package com.yjkj.service_recoder.java.ui.personal
 
+import android.content.Intent
+import android.net.Uri
 import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableField
 
-import com.yjkj.property_management.entity.ContactsUserEntity
-import com.yjkj.property_management.entity.OwnerEntity
-import com.yjkj.property_management.java.utils.ifNull
-import com.yjkj.property_management.ui.page.homePageFragment.secondHomePage.repo.PersonalRepo
-import com.yjkj.property_management.ui.page.personal.item.CallLogItemViewModel
-import com.yjkj.property_management.ui.page.personal.item.UserContactsItemViewModel
+import com.yjkj.service_recoder.java.entity.ContactsUserEntity
+import com.yjkj.service_recoder.java.entity.OwnerEntity
+import com.yjkj.service_recoder.java.utils.ifNull
+import com.yjkj.service_recoder.java.ui.personal.repo.PersonalRepo
+import com.yjkj.service_recoder.java.ui.personal.item.CallLogItemViewModel
+import com.yjkj.service_recoder.java.ui.personal.item.UserContactsItemViewModel
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.library.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -34,6 +36,7 @@ class PersonalViewModel : BaseViewModel() {
     //用户联系人列表
     val userContactsItems = ObservableArrayList<UserContactsItemViewModel>()
     val userContactsItemBinding = ItemBinding.of<UserContactsItemViewModel>(BR.viewModel,R.layout.user_contacts_item_layout)
+    val userContactsItemClickFlow = MutableSharedFlow <String>()
 
     //呼叫服务记录列表
     val callLogItems = ObservableArrayList<CallLogItemViewModel>()

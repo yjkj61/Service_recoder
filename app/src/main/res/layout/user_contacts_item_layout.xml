@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yjkj.property_management.ui.page.personal.item.UserContactsItemViewModel" />
+            type="com.yjkj.service_recoder.java.ui.personal.item.UserContactsItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -47,6 +47,7 @@
 
             <TextView
                 android:text="@={viewModel.userRelationPhoneNumber}"
+                android:onClick="@{()->viewModel.callphone()}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBaseline_toBaselineOf="@id/user_relation_name_text"

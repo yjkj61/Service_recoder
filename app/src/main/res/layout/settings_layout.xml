@@ -12,57 +12,64 @@
             type="com.yjkj.service_recoder.ui.homepage.HomeFragment.Click" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toTopOf="@+id/weather_info_layout"
-        app:layout_constraintStart_toEndOf="@+id/weather_info_layout"
-        app:layout_constraintEnd_toEndOf="parent"
+    <LinearLayout
         android:layout_marginStart="20dp"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:background="@color/transparent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:id="@+id/service_desc_text"
             android:background="@drawable/white_bg_10_dp_corner_bg_shape"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/logo_image"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
                 android:src="@drawable/group_310"
-                android:layout_marginStart="24dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-            <TextView
-                android:text="芜湖零距离养护中心"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@+id/logo_image"
-                app:layout_constraintStart_toEndOf="@id/logo_image"
-                android:layout_marginStart="28dp"
-                android:textSize="12dp"
-                android:textColor="@color/color_333333"/>
-            <TextView
-                android:text="提供专业配套医养融合服务"
-                android:textColor="@color/color_999999"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:textSize="8dp"
-                app:layout_constraintStart_toEndOf="@id/logo_image"
-                app:layout_constraintBottom_toBottomOf="@id/logo_image"/>
+                android:layout_marginStart="24dp"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/logo_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:text="芜湖零距离养护中心"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/color_333333"/>
+
+                <TextView
+                    android:id="@+id/tv_shop_tip"
+                    android:text="提供专业配套医养融合服务"
+                    android:textColor="@color/color_999999"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
         <androidx.appcompat.widget.LinearLayoutCompat
             android:background="@drawable/white_bg_10_dp_corner_bg_shape"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/service_desc_text"
             android:layout_marginTop="20dp">
 
             <TextView
@@ -71,21 +78,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_157"
-                android:text="设置"/>
-            <TextView
-                android:onClick="@{()->click.speedUp()}"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:textSize="10dp"
-                android:textColor="@color/color_333333"
-                android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_157_1"
+                android:drawableTop="@mipmap/icon_main_setting"
                 android:text="设置"/>
             <TextView
                 android:onClick="@{()->click.update()}"
@@ -93,24 +89,35 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_158"
-                android:text="设置"/>
+                android:drawableTop="@mipmap/icon_main_update"
+                android:text="升级"/>
+            <TextView
+                android:onClick="@{()->click.speedUp()}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textSize="14dp"
+                android:textColor="@color/color_333333"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/icon_main_jiasu"
+                android:text="加速"/>
             <TextView
                 android:onClick="@{()->click.volume()}"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:textSize="10dp"
+                android:textSize="14dp"
                 android:textColor="@color/color_333333"
                 android:gravity="center_horizontal"
-                android:drawableTop="@drawable/group_160"
-                android:text="设置"/>
+                android:drawableTop="@mipmap/icon_main_vol"
+                android:text="音量"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

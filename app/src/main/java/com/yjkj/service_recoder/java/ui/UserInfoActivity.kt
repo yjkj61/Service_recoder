@@ -17,12 +17,12 @@ import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonArray
-import com.yjkj.property_management.entity.OwnerEntity
-import com.yjkj.property_management.java.utils.confirmDialog
-import com.yjkj.property_management.java.utils.extractBirthDate
-import com.yjkj.property_management.java.utils.getTimeFormat
-import com.yjkj.property_management.java.utils.ifNull
-import com.yjkj.property_management.java.utils.toMedicalStr
+import com.yjkj.service_recoder.java.entity.OwnerEntity
+import com.yjkj.service_recoder.java.utils.confirmDialog
+import com.yjkj.service_recoder.java.utils.extractBirthDate
+import com.yjkj.service_recoder.java.utils.getTimeFormat
+import com.yjkj.service_recoder.java.utils.ifNull
+import com.yjkj.service_recoder.java.utils.toMedicalStr
 import com.yjkj.service_recoder.R
 import com.yjkj.service_recoder.databinding.ActivityUserInfoBinding
 import com.yjkj.service_recoder.java.adapter.DeviceInfoAdapter
@@ -584,7 +584,7 @@ class UserInfoActivity : BaseActivity<ActivityUserInfoBinding>() {
             R.layout.spinner_dropdown_item,
             userPortraits
         )
-        val i = data.ownerRole?.ifNull { "0" }?.toInt()
+//        val i = data.ownerRole?.ifNull { "0" }?.toInt()
         currentPortraits = data.ownerRole?.ifNull { "" }.toString()
         viewBinding.include1.userPortraitSpinner.apply {
             adapter = userPortraitsAdapter
@@ -603,46 +603,46 @@ class UserInfoActivity : BaseActivity<ActivityUserInfoBinding>() {
                 }
 
             }
-            setSelection(i!!)
+//            setSelection(i!!)
         }
 
-        val role = when (data.ownerRole.ifNull { "" }) {
-            "00" -> {
-                "普通职工"
-            }
-
-            "01" -> {
-                "政府领导"
-            }
-
-            "02" -> {
-                "事业单位"
-            }
-
-            "03" -> {
-                "公务员"
-            }
-
-            "04" -> {
-                "企业家"
-            }
-
-            "05" -> {
-                "退休职工"
-            }
-
-            "06" -> {
-                "退役军官"
-            }
-
-            "07" -> {
-                "低保老人"
-            }
-
-            else -> {
-                "其他"
-            }
-        }
+//        val role = when (data.ownerRole.ifNull { "" }) {
+//            "00" -> {
+//                "普通职工"
+//            }
+//
+//            "01" -> {
+//                "政府领导"
+//            }
+//
+//            "02" -> {
+//                "事业单位"
+//            }
+//
+//            "03" -> {
+//                "公务员"
+//            }
+//
+//            "04" -> {
+//                "企业家"
+//            }
+//
+//            "05" -> {
+//                "退休职工"
+//            }
+//
+//            "06" -> {
+//                "退役军官"
+//            }
+//
+//            "07" -> {
+//                "低保老人"
+//            }
+//
+//            else -> {
+//                "其他"
+//            }
+//        }
 //        val list = mutableListOf(role)
 //        val myAdapter =  UserHabitAdapter()
 //        myAdapter.setData(list)
@@ -723,7 +723,7 @@ class UserInfoActivity : BaseActivity<ActivityUserInfoBinding>() {
 //            }
             //ziliSpinner.setSelection(ziliSelection)
             //ziliEdittext.setText("${getSelfAssess(userInfoData.ownerSelfAssess.toString())}")
-//            val ownerNurseAdapter = ArrayAdapter(this@UserInfoActivity,com.example.medicalservice.R.layout.spinner_dropdown_item,ownerNurseSpinnerList)
+//            val ownerNurseAdapter = ArrayAdapter(this@UserInfoActivity,com.yjkj.service_recoder.java.R.layout.spinner_dropdown_item,ownerNurseSpinnerList)
 //            nurseLevelSpinner.adapter = ownerNurseAdapter
 //            ownerNurseSpinnerList.forEachIndexed loop@{ index, s ->
 //                if(userInfoData.ownerNurseAssess.ifNull { "" } == s){

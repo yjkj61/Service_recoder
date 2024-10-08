@@ -1,7 +1,7 @@
 package com.yjkj.service_recoder.java.http;
 
 
-import com.yjkj.property_management.library.http.utils.JsonUtil;
+import com.yjkj.service_recoder.java.http.utils.JsonUtil;
 import com.yjkj.service_recoder.java.http.utils.IOUtils;
 import com.yjkj.service_recoder.java.http.utils.OkLogger;
 

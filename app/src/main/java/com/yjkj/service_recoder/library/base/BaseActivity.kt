@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.blankj.utilcode.util.KeyboardUtils
 
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 
 
 /**
@@ -60,7 +60,7 @@ abstract class BaseActivity : DataBindingActivity() {
 
     protected open fun <T : ViewModel> getApplicationScopeViewModel(modelClass: Class<T>): T {
         if (mApplicationProvider == null) {
-            mApplicationProvider = ViewModelProvider(this.applicationContext as Application)
+            mApplicationProvider = ViewModelProvider(this.applicationContext as MyApplication)
         }
         return mApplicationProvider!![modelClass]
     }

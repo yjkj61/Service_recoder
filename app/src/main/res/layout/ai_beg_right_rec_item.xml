@@ -26,8 +26,15 @@
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_marginStart="4dp"
-            android:src="@drawable/ask"
             android:visibility="gone"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/show"-->
+<!--            android:layout_width="14dp"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:src="@drawable/ask"-->
+<!--            android:visibility="gone"/>-->
     </LinearLayout>
 
 

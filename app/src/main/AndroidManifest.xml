@@ -7,20 +7,29 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
     <application
-        android:name=".Application"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Service_recoder"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:theme"
         tools:targetApi="31">
         <activity
             android:name=".ui.main.mainAct.MainActivity"
@@ -32,6 +41,98 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".java.ui.ActiveDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.ActiveListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.ArticleListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.CateringServices"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.CfbgActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.HardSoftDeviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.HealthCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.HlListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.SubmitOrderView"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.UserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.UserListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.WebView"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.aibed.AiBedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.cateringServicesActivity.AddressMangerCatering"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.cateringServicesActivity.CateringSelectView"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.cateringServicesActivity.EatCar1"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.cateringServicesActivity.EatCar2"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.cateringServicesActivity.Order.OrderListActivity"
+            android:exported="false" /><!---->
+        <activity
+            android:name=".java.ui.cateringServicesActivity.Order.PayOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.personal.PersonalFragment"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.AddressManger"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.CardServiceDetail"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.CardServiceDetailMap"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.JudgeView"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.LogisticsView"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.OrderView"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.PropertyCardService"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.property.PropertyFiveBlessings"
+            android:exported="false" />
+        <activity
+            android:name=".java.ui.OtherRoomsListActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

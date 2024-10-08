@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.yjkj.property_management.ui.page.personal.PersonalFragment;
+import com.yjkj.service_recoder.java.ui.personal.PersonalFragment;
 import com.yjkj.service_recoder.databinding.ActivityDetailListBinding;
 import com.yjkj.service_recoder.java.adapter.UserlistAdapter;
 import com.yjkj.service_recoder.java.base.BaseActivity;

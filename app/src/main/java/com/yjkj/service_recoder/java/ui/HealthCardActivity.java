@@ -1,6 +1,7 @@
 package com.yjkj.service_recoder.java.ui;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -54,10 +55,13 @@ public class HealthCardActivity extends BaseActivity<ActivityDetailListBinding> 
         viewBinding.recyclweview.setAdapter(adapter);
 
         getList();
-    }
 
-    public void back() {
-        finish();
+        viewBinding.igBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     //获取检测监测信息

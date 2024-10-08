@@ -2,8 +2,8 @@ package com.yjkj.service_recoder.java.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.yjkj.property_management.java.utils.log
-import com.yjkj.property_management.java.utils.toast
+import com.yjkj.service_recoder.java.utils.log
+import com.yjkj.service_recoder.java.utils.toast
 import com.yjkj.service_recoder.library.http.DataException
 import com.yjkj.service_recoder.library.http.DataResult
 import com.yjkj.service_recoder.library.http.LoginDataResult

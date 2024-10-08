@@ -6,10 +6,10 @@
     <data>
         <variable
             name="viewModel"
-            type="com.yjkj.property_management.ui.page.personal.PersonalViewModel" />
+            type="com.yjkj.service_recoder.java.ui.personal.PersonalViewModel" />
         <variable
             name="click"
-            type="com.yjkj.property_management.ui.page.personal.PersonalFragment.Click" />
+            type="com.yjkj.service_recoder.java.ui.personal.PersonalFragment.Click" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

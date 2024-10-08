@@ -55,10 +55,13 @@ public class HardSoftDeviceActivity extends BaseActivity<ActivityHardsoftDeviceB
 
             }
         });
-    }
 
-    public void back(){
-        finish();
+        viewBinding.igBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override

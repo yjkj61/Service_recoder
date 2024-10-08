@@ -16,7 +16,7 @@ import com.blankj.utilcode.util.ScreenUtils
 import com.gyf.immersionbar.ImmersionBar
 
 import com.kunminx.architecture.ui.page.DataBindingActivity
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import com.yjkj.service_recoder.R
 
 
@@ -163,7 +163,7 @@ abstract class BaseDialogFragment : DataBindingDialogFragment(){
     protected open fun <T : ViewModel> getApplicationScopeViewModel(modelClass: Class<T>): T {
         if (mApplicationProvider == null) {
             mApplicationProvider =
-                ViewModelProvider(mActivity?.applicationContext as Application)
+                ViewModelProvider(mActivity?.applicationContext as MyApplication)
         }
 
         return mApplicationProvider?.get(modelClass)!!

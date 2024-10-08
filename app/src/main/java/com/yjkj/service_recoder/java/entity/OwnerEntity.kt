@@ -1,4 +1,4 @@
-package com.yjkj.property_management.entity
+package com.yjkj.service_recoder.java.entity
 
 import java.io.Serializable
 

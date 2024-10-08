@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.findViewTreeLifecycleOwner
 import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import com.kunminx.architecture.ui.page.DataBindingConfig
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 
 /**
 * @Author hxy
@@ -65,7 +65,7 @@ abstract class DataBindingCustomView(context: Context, attributeSet: AttributeSe
     protected open fun <T : ViewModel> getApplicationScopeViewModel(modelClass: Class<T>): T {
         if (mApplicationProvider == null) {
             mApplicationProvider =
-                ViewModelProvider(Application())
+                ViewModelProvider(MyApplication())
         }
 
         return mApplicationProvider?.get(modelClass)!!

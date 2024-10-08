@@ -15,7 +15,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.blankj.utilcode.util.KeyboardUtils
-import com.yjkj.service_recoder.Application
+import com.yjkj.service_recoder.MyApplication
 import com.yjkj.service_recoder.library.dsl.PermissionBuilder
 import com.yjkj.service_recoder.library.dsl.registerPermission
 import kotlinx.coroutines.Dispatchers
@@ -136,7 +136,7 @@ abstract class BaseFragment : DataBindingFragment(){
     protected open fun <T : ViewModel> getApplicationScopeViewModel(modelClass: Class<T>): T {
         if (mApplicationProvider == null) {
             mApplicationProvider =
-                ViewModelProvider(mActivity.applicationContext as Application)
+                ViewModelProvider(mActivity.applicationContext as MyApplication)
         }
 
         return mApplicationProvider?.get(modelClass)!!
